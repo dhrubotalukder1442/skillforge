@@ -17,7 +17,7 @@ import { AuthModule } from './auth/auth.module';
         type: 'postgres',
         url: configService.get<string>('DATABASE_URL'),
         autoLoadEntities: true,
-        synchronize: true, // Set to false in production to avoid data loss
+        synchronize: true,
       }),
     }),
     UsersModule,
