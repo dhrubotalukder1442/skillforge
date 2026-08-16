@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import {
   ArrowRight,
@@ -16,6 +17,7 @@ type MessageState = {
 } | null;
 
 export default function LoginPage() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -56,6 +58,7 @@ export default function LoginPage() {
         type: "success",
         text: `Welcome back${data.user?.name ? `, ${data.user.name}` : ""}.`,
       });
+      router.push("/dashboard");
     } catch (error) {
       setMessage({
         type: "error",
