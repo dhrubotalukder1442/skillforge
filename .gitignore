@@ -15,6 +15,7 @@ frontend/out/
 
 # NestJS
 backend/dist/
+backend/uploads/
 
 # Build outputs
 build/
