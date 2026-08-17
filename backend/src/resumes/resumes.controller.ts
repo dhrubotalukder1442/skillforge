@@ -44,6 +44,8 @@ export class ResumesController {
     const userId = req.user.userId;
     const resume = await this.resumesService.create(file.originalname, file.path, userId);
 
+    const skillsResult = await this.resumesService.extractSkills(file.path, file.originalname);
+
     return {
       message: 'Resume uploaded successfully',
       resume: {
@@ -51,6 +53,8 @@ export class ResumesController {
         fileName: resume.fileName,
         uploadedAt: resume.uploadedAt,
       },
+      skills: skillsResult.matchedSkills,
+      totalSkillsFound: skillsResult.totalSkillsFound,
     };
   }
 }

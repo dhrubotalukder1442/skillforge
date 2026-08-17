@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { LogOut, Sparkles, Upload, FileText, CheckCircle2 } from "lucide-react";
+import { LogOut, Sparkles, Upload, FileText, CheckCircle2, Tag } from "lucide-react";
 
 type UserProfile = {
   userId: number;
@@ -21,6 +21,7 @@ export default function DashboardPage() {
     type: "success" | "error";
     text: string;
   } | null>(null);
+  const [matchedSkills, setMatchedSkills] = useState<string[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -65,6 +66,7 @@ export default function DashboardPage() {
 
   const handleFileSelect = (file: File | null) => {
     setUploadMessage(null);
+    setMatchedSkills([]);
     if (file && file.type !== "application/pdf") {
       setUploadMessage({ type: "error", text: "Only PDF files are allowed." });
       setSelectedFile(null);
@@ -84,6 +86,7 @@ export default function DashboardPage() {
 
     setUploading(true);
     setUploadMessage(null);
+    setMatchedSkills([]);
 
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL;
@@ -108,6 +111,7 @@ export default function DashboardPage() {
         type: "success",
         text: `"${data.resume.fileName}" uploaded successfully.`,
       });
+      setMatchedSkills(data.skills || []);
       setSelectedFile(null);
       if (fileInputRef.current) fileInputRef.current.value = "";
     } catch (err) {
@@ -246,6 +250,33 @@ export default function DashboardPage() {
               }`}
             >
               {uploadMessage.text}
+            </div>
+          )}
+
+          {matchedSkills.length > 0 && (
+            <div className="mt-5 rounded-xl border border-[#dce3ee] bg-[#fbfcfe] p-5">
+              <div className="mb-3 flex items-center gap-2">
+                <Tag className="h-4 w-4 text-[#6d63ff]" strokeWidth={2.5} />
+                <p className="text-sm font-semibold text-[#334155]">
+                  Detected skills ({matchedSkills.length})
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {matchedSkills.map((skill) => (
+                  <span
+                    className="rounded-full bg-[#eef1f7] px-3 py-1.5 text-xs font-semibold text-[#6d63ff]"
+                    key={skill}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {uploadMessage?.type === "success" && matchedSkills.length === 0 && (
+            <div className="mt-5 rounded-xl border border-[#f0e6d2] bg-[#fffbf0] px-4 py-3 text-sm text-[#8a6d1f]">
+              No matching skills were detected from your resume text.
             </div>
           )}
         </div>
