@@ -2,11 +2,23 @@
 
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { LogOut, Sparkles, Upload, FileText, CheckCircle2, Tag } from "lucide-react";
+import { LogOut, Sparkles, Upload, FileText, CheckCircle2, Tag, Target } from "lucide-react";
 
 type UserProfile = {
   userId: number;
   email: string;
+};
+
+type Job = {
+  id: number;
+  title: string;
+};
+
+type SkillGapResult = {
+  requiredSkills: string[];
+  matchedSkills: string[];
+  missingSkills: string[];
+  readinessScore: number;
 };
 
 export default function DashboardPage() {
@@ -23,6 +35,12 @@ export default function DashboardPage() {
   } | null>(null);
   const [matchedSkills, setMatchedSkills] = useState<string[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const [jobs, setJobs] = useState<Job[]>([]);
+  const [selectedJobId, setSelectedJobId] = useState<string>("");
+  const [gapResult, setGapResult] = useState<SkillGapResult | null>(null);
+  const [gapLoading, setGapLoading] = useState(false);
+  const [gapError, setGapError] = useState("");
 
   useEffect(() => {
     const token = localStorage.getItem("access_token");
@@ -56,7 +74,19 @@ export default function DashboardPage() {
       }
     };
 
+    const fetchJobs = async () => {
+      try {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+        const res = await fetch(`${apiUrl}/jobs`);
+        const data = await res.json();
+        setJobs(data);
+      } catch (err) {
+        // Silently ignore; the gap section will just show no options
+      }
+    };
+
     fetchProfile();
+    fetchJobs();
   }, [router]);
 
   const handleLogout = () => {
@@ -124,6 +154,41 @@ export default function DashboardPage() {
     }
   };
 
+  const handleCheckGap = async () => {
+    if (!selectedJobId) return;
+
+    const token = localStorage.getItem("access_token");
+    if (!token) {
+      router.push("/login");
+      return;
+    }
+
+    setGapLoading(true);
+    setGapError("");
+    setGapResult(null);
+
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+      const res = await fetch(`${apiUrl}/jobs/gap?jobId=${selectedJobId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Could not check skill gap");
+      }
+
+      setGapResult(data);
+    } catch (err) {
+      setGapError(err instanceof Error ? err.message : "Something went wrong.");
+    } finally {
+      setGapLoading(false);
+    }
+  };
+
   if (loading) {
     return (
       <main className="flex min-h-screen items-center justify-center bg-[#f4f7fb]">
@@ -139,6 +204,13 @@ export default function DashboardPage() {
       </main>
     );
   }
+
+  const scoreColor =
+    gapResult && gapResult.readinessScore >= 70
+      ? "#15803d"
+      : gapResult && gapResult.readinessScore >= 40
+        ? "#b45309"
+        : "#b91c1c";
 
   return (
     <main className="min-h-screen bg-[#f4f7fb] px-4 py-8 font-sans text-[#14213d] sm:px-8 sm:py-12">
@@ -175,7 +247,7 @@ export default function DashboardPage() {
           </p>
         </div>
 
-        <div className="rounded-[24px] bg-white p-8 shadow-[0_12px_40px_rgba(30,52,92,0.08)] sm:p-10">
+        <div className="mb-6 rounded-[24px] bg-white p-8 shadow-[0_12px_40px_rgba(30,52,92,0.08)] sm:p-10">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#64748b]">
             Step 1
           </p>
@@ -273,10 +345,97 @@ export default function DashboardPage() {
               </div>
             </div>
           )}
+        </div>
 
-          {uploadMessage?.type === "success" && matchedSkills.length === 0 && (
-            <div className="mt-5 rounded-xl border border-[#f0e6d2] bg-[#fffbf0] px-4 py-3 text-sm text-[#8a6d1f]">
-              No matching skills were detected from your resume text.
+        <div className="rounded-[24px] bg-white p-8 shadow-[0_12px_40px_rgba(30,52,92,0.08)] sm:p-10">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#64748b]">
+            Step 2
+          </p>
+          <h2 className="mb-1 text-xl font-semibold tracking-[-0.03em] sm:text-2xl">
+            Check your skill gap
+          </h2>
+          <p className="mb-6 text-sm text-[#64748b]">
+            Pick a target role to see how ready you are and what&apos;s
+            missing.
+          </p>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <select
+              className="h-11 flex-1 rounded-xl border border-[#dce3ee] bg-[#fbfcfe] px-4 text-[15px] text-[#14213d] outline-none transition focus:border-[#6d63ff] focus:bg-white focus:ring-4 focus:ring-[#6d63ff]/10 sm:h-12"
+              onChange={(e) => setSelectedJobId(e.target.value)}
+              value={selectedJobId}
+            >
+              <option value="">Select a target role</option>
+              {jobs.map((job) => (
+                <option key={job.id} value={job.id}>
+                  {job.title}
+                </option>
+              ))}
+            </select>
+
+            <button
+              className="flex h-11 items-center justify-center gap-2 rounded-xl bg-[#14213d] px-6 text-[15px] font-semibold text-white transition hover:bg-[#1e2c52] disabled:cursor-not-allowed disabled:bg-[#a0a7b8] sm:h-12"
+              disabled={!selectedJobId || gapLoading}
+              onClick={handleCheckGap}
+            >
+              {gapLoading ? (
+                "Checking..."
+              ) : (
+                <>
+                  <Target className="h-4 w-4" strokeWidth={2.5} />
+                  Check readiness
+                </>
+              )}
+            </button>
+          </div>
+
+          {gapError && (
+            <div className="mt-4 rounded-xl border border-[#f2c9cd] bg-[#fff5f5] px-4 py-3 text-sm font-medium text-[#ba4d58]">
+              {gapError}
+            </div>
+          )}
+
+          {gapResult && (
+            <div className="mt-6 space-y-5">
+              <div className="flex items-center gap-4 rounded-xl border border-[#dce3ee] bg-[#fbfcfe] p-5">
+                <div
+                  className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full text-lg font-bold"
+                  style={{ backgroundColor: `${scoreColor}15`, color: scoreColor }}
+                >
+                  {gapResult.readinessScore}%
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-[#334155]">
+                    Job readiness score
+                  </p>
+                  <p className="text-xs text-[#94a3b8]">
+                    {gapResult.matchedSkills.length} of{" "}
+                    {gapResult.requiredSkills.length} required skills matched
+                  </p>
+                </div>
+              </div>
+
+              {gapResult.missingSkills.length > 0 ? (
+                <div>
+                  <p className="mb-3 text-sm font-semibold text-[#334155]">
+                    Skills to work on
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {gapResult.missingSkills.map((skill) => (
+                      <span
+                        className="rounded-full bg-[#fff5f5] px-3 py-1.5 text-xs font-semibold text-[#ba4d58]"
+                        key={skill}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className="rounded-xl border border-[#bce8da] bg-[#effbf7] px-4 py-3 text-sm font-medium text-[#13795f]">
+                  You already match every required skill for this role.
+                </div>
+              )}
             </div>
           )}
         </div>
