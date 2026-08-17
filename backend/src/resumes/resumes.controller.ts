@@ -12,10 +12,14 @@ import { diskStorage } from 'multer';
 import { extname } from 'path';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { ResumesService } from './resumes.service';
+import { SkillsService } from '../skills/skills.service';
 
 @Controller('resumes')
 export class ResumesController {
-  constructor(private resumesService: ResumesService) {}
+  constructor(
+    private resumesService: ResumesService,
+    private skillsService: SkillsService,
+  ) {}
 
   @UseGuards(JwtAuthGuard)
   @Post('upload')
@@ -45,6 +49,11 @@ export class ResumesController {
     const resume = await this.resumesService.create(file.originalname, file.path, userId);
 
     const skillsResult = await this.resumesService.extractSkills(file.path, file.originalname);
+    const matchedSkills: string[] = skillsResult.matchedSkills || [];
+
+    if (matchedSkills.length > 0) {
+      await this.skillsService.saveUserSkills(userId, matchedSkills, 'resume');
+    }
 
     return {
       message: 'Resume uploaded successfully',
@@ -53,7 +62,7 @@ export class ResumesController {
         fileName: resume.fileName,
         uploadedAt: resume.uploadedAt,
       },
-      skills: skillsResult.matchedSkills,
+      skills: matchedSkills,
       totalSkillsFound: skillsResult.totalSkillsFound,
     };
   }
