@@ -2,7 +2,17 @@
 
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { LogOut, Sparkles, Upload, FileText, CheckCircle2, Tag, Target } from "lucide-react";
+import {
+  LogOut,
+  Sparkles,
+  Upload,
+  FileText,
+  CheckCircle2,
+  Tag,
+  Target,
+  Map,
+  ExternalLink,
+} from "lucide-react";
 
 type UserProfile = {
   userId: number;
@@ -19,6 +29,21 @@ type SkillGapResult = {
   matchedSkills: string[];
   missingSkills: string[];
   readinessScore: number;
+};
+
+type RoadmapStepData = {
+  id: number;
+  skillName: string;
+  resourceTitle: string;
+  resourceUrl: string;
+  order: number;
+  status: string;
+};
+
+type RoadmapData = {
+  id: number;
+  generatedAt: string;
+  steps: RoadmapStepData[];
 };
 
 export default function DashboardPage() {
@@ -41,6 +66,10 @@ export default function DashboardPage() {
   const [gapResult, setGapResult] = useState<SkillGapResult | null>(null);
   const [gapLoading, setGapLoading] = useState(false);
   const [gapError, setGapError] = useState("");
+
+  const [roadmap, setRoadmap] = useState<RoadmapData | null>(null);
+  const [roadmapLoading, setRoadmapLoading] = useState(false);
+  const [roadmapError, setRoadmapError] = useState("");
 
   useEffect(() => {
     const token = localStorage.getItem("access_token");
@@ -81,7 +110,7 @@ export default function DashboardPage() {
         const data = await res.json();
         setJobs(data);
       } catch (err) {
-        // Silently ignore; the gap section will just show no options
+        // Silently ignore
       }
     };
 
@@ -166,6 +195,8 @@ export default function DashboardPage() {
     setGapLoading(true);
     setGapError("");
     setGapResult(null);
+    setRoadmap(null);
+    setRoadmapError("");
 
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL;
@@ -186,6 +217,41 @@ export default function DashboardPage() {
       setGapError(err instanceof Error ? err.message : "Something went wrong.");
     } finally {
       setGapLoading(false);
+    }
+  };
+
+  const handleGenerateRoadmap = async () => {
+    if (!selectedJobId) return;
+
+    const token = localStorage.getItem("access_token");
+    if (!token) {
+      router.push("/login");
+      return;
+    }
+
+    setRoadmapLoading(true);
+    setRoadmapError("");
+
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+      const res = await fetch(`${apiUrl}/roadmap/generate?jobId=${selectedJobId}`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Could not generate roadmap");
+      }
+
+      setRoadmap(data);
+    } catch (err) {
+      setRoadmapError(err instanceof Error ? err.message : "Something went wrong.");
+    } finally {
+      setRoadmapLoading(false);
     }
   };
 
@@ -347,7 +413,7 @@ export default function DashboardPage() {
           )}
         </div>
 
-        <div className="rounded-[24px] bg-white p-8 shadow-[0_12px_40px_rgba(30,52,92,0.08)] sm:p-10">
+        <div className="mb-6 rounded-[24px] bg-white p-8 shadow-[0_12px_40px_rgba(30,52,92,0.08)] sm:p-10">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#64748b]">
             Step 2
           </p>
@@ -362,7 +428,11 @@ export default function DashboardPage() {
           <div className="flex flex-col gap-3 sm:flex-row">
             <select
               className="h-11 flex-1 rounded-xl border border-[#dce3ee] bg-[#fbfcfe] px-4 text-[15px] text-[#14213d] outline-none transition focus:border-[#6d63ff] focus:bg-white focus:ring-4 focus:ring-[#6d63ff]/10 sm:h-12"
-              onChange={(e) => setSelectedJobId(e.target.value)}
+              onChange={(e) => {
+                setSelectedJobId(e.target.value);
+                setGapResult(null);
+                setRoadmap(null);
+              }}
               value={selectedJobId}
             >
               <option value="">Select a target role</option>
@@ -430,6 +500,21 @@ export default function DashboardPage() {
                       </span>
                     ))}
                   </div>
+
+                  <button
+                    className="mt-5 flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#46c2a5] text-[15px] font-semibold text-[#14213d] transition hover:bg-[#3bab90] disabled:cursor-not-allowed disabled:bg-[#a9d9cd] sm:h-12"
+                    disabled={roadmapLoading}
+                    onClick={handleGenerateRoadmap}
+                  >
+                    {roadmapLoading ? (
+                      "Generating..."
+                    ) : (
+                      <>
+                        <Map className="h-4 w-4" strokeWidth={2.5} />
+                        Generate learning roadmap
+                      </>
+                    )}
+                  </button>
                 </div>
               ) : (
                 <div className="rounded-xl border border-[#bce8da] bg-[#effbf7] px-4 py-3 text-sm font-medium text-[#13795f]">
@@ -439,6 +524,51 @@ export default function DashboardPage() {
             </div>
           )}
         </div>
+
+        {roadmapError && (
+          <div className="mb-6 rounded-xl border border-[#f2c9cd] bg-[#fff5f5] px-4 py-3 text-sm font-medium text-[#ba4d58]">
+            {roadmapError}
+          </div>
+        )}
+
+        {roadmap && roadmap.steps.length > 0 && (
+          <div className="rounded-[24px] bg-white p-8 shadow-[0_12px_40px_rgba(30,52,92,0.08)] sm:p-10">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#64748b]">
+              Step 3
+            </p>
+            <h2 className="mb-1 text-xl font-semibold tracking-[-0.03em] sm:text-2xl">
+              Your learning roadmap
+            </h2>
+            <p className="mb-6 text-sm text-[#64748b]">
+              Follow these steps in order to close your skill gap.
+            </p>
+
+            <div className="space-y-3">
+                               {roadmap.steps.map((step) => (
+                <a
+                  className="flex items-center gap-4 rounded-xl border border-[#dce3ee] bg-[#fbfcfe] p-4 transition hover:border-[#6d63ff] hover:bg-[#f5f4ff]"
+                  href={step.resourceUrl}
+                  key={step.id}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#eef1f7] text-xs font-bold text-[#6d63ff]">
+                    {step.order}
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-semibold text-[#334155]">
+                      {step.skillName}
+                    </p>
+                    <p className="truncate text-xs text-[#94a3b8]">
+                      {step.resourceTitle}
+                    </p>
+                  </div>
+                  <ExternalLink className="h-4 w-4 shrink-0 text-[#94a3b8]" />
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </main>
   );

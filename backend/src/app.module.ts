@@ -8,6 +8,7 @@ import { AuthModule } from './auth/auth.module';
 import { ResumesModule } from './resumes/resumes.module';
 import { SkillsModule } from './skills/skills.module';
 import { JobsModule } from './jobs/jobs.module';
+import { RoadmapModule } from './roadmap/roadmap.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { JobsModule } from './jobs/jobs.module';
     ResumesModule,
     SkillsModule,
     JobsModule,
+    RoadmapModule,
   ],
   controllers: [AppController],
   providers: [AppService],
