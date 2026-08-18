@@ -12,6 +12,7 @@ import {
   Target,
   Map,
   ExternalLink,
+    Code2,
 } from "lucide-react";
 
 type UserProfile = {
@@ -60,6 +61,14 @@ export default function DashboardPage() {
   } | null>(null);
   const [matchedSkills, setMatchedSkills] = useState<string[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+    const [githubUsername, setGithubUsername] = useState("");
+  const [githubLoading, setGithubLoading] = useState(false);
+  const [githubMessage, setGithubMessage] = useState<{
+    type: "success" | "error";
+    text: string;
+  } | null>(null);
+  const [githubSkills, setGithubSkills] = useState<string[]>([]);
 
   const [jobs, setJobs] = useState<Job[]>([]);
   const [selectedJobId, setSelectedJobId] = useState<string>("");
@@ -180,6 +189,51 @@ export default function DashboardPage() {
       });
     } finally {
       setUploading(false);
+    }
+  };
+
+    const handleConnectGithub = async () => {
+    if (!githubUsername.trim()) return;
+
+    const token = localStorage.getItem("access_token");
+    if (!token) {
+      router.push("/login");
+      return;
+    }
+
+    setGithubLoading(true);
+    setGithubMessage(null);
+    setGithubSkills([]);
+
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+      const res = await fetch(`${apiUrl}/github/connect`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ githubUsername: githubUsername.trim() }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Could not connect GitHub");
+      }
+
+      setGithubMessage({
+        type: "success",
+        text: `Analyzed ${data.reposAnalyzed} repositories for "${data.githubUsername}".`,
+      });
+      setGithubSkills(data.skills || []);
+    } catch (err) {
+      setGithubMessage({
+        type: "error",
+        text: err instanceof Error ? err.message : "Something went wrong.",
+      });
+    } finally {
+      setGithubLoading(false);
     }
   };
 
@@ -401,6 +455,79 @@ export default function DashboardPage() {
               </div>
               <div className="flex flex-wrap gap-2">
                 {matchedSkills.map((skill) => (
+                  <span
+                    className="rounded-full bg-[#eef1f7] px-3 py-1.5 text-xs font-semibold text-[#6d63ff]"
+                    key={skill}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+                  <div className="mb-6 rounded-[24px] bg-white p-8 shadow-[0_12px_40px_rgba(30,52,92,0.08)] sm:p-10">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#64748b]">
+            Optional
+          </p>
+          <h2 className="mb-1 text-xl font-semibold tracking-[-0.03em] sm:text-2xl">
+            Connect your GitHub
+          </h2>
+          <p className="mb-6 text-sm text-[#64748b]">
+            We&apos;ll scan your public repositories to detect more skills.
+          </p>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <div className="relative flex-1">
+              <Code2 className="pointer-events-none absolute left-4 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-[#94a3b8]" />
+              <input
+                className="h-11 w-full rounded-xl border border-[#dce3ee] bg-[#fbfcfe] pl-11 pr-4 text-[15px] text-[#14213d] outline-none transition placeholder:text-[#9aa8ba] focus:border-[#6d63ff] focus:bg-white focus:ring-4 focus:ring-[#6d63ff]/10 sm:h-12"
+                onChange={(e) => setGithubUsername(e.target.value)}
+                placeholder="your-github-username"
+                type="text"
+                value={githubUsername}
+              />
+            </div>
+
+            <button
+              className="flex h-11 items-center justify-center gap-2 rounded-xl bg-[#14213d] px-6 text-[15px] font-semibold text-white transition hover:bg-[#1e2c52] disabled:cursor-not-allowed disabled:bg-[#a0a7b8] sm:h-12"
+              disabled={!githubUsername.trim() || githubLoading}
+              onClick={handleConnectGithub}
+            >
+              {githubLoading ? (
+                "Analyzing..."
+              ) : (
+                <>
+                  <Code2 className="h-4 w-4" strokeWidth={2.5} />
+                  Connect
+                </>
+              )}
+            </button>
+          </div>
+
+          {githubMessage && (
+            <div
+              className={`mt-4 rounded-xl border px-4 py-3 text-sm font-medium ${
+                githubMessage.type === "success"
+                  ? "border-[#bce8da] bg-[#effbf7] text-[#13795f]"
+                  : "border-[#f2c9cd] bg-[#fff5f5] text-[#ba4d58]"
+              }`}
+            >
+              {githubMessage.text}
+            </div>
+          )}
+
+          {githubSkills.length > 0 && (
+            <div className="mt-5 rounded-xl border border-[#dce3ee] bg-[#fbfcfe] p-5">
+              <div className="mb-3 flex items-center gap-2">
+                <Tag className="h-4 w-4 text-[#6d63ff]" strokeWidth={2.5} />
+                <p className="text-sm font-semibold text-[#334155]">
+                  Skills from GitHub ({githubSkills.length})
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {githubSkills.map((skill) => (
                   <span
                     className="rounded-full bg-[#eef1f7] px-3 py-1.5 text-xs font-semibold text-[#6d63ff]"
                     key={skill}
