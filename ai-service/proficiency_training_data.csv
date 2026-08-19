@@ -1,0 +1,1351 @@
+sentence,skill,label
+"Deep expertise in SQL, including advanced patterns and internals.",SQL,Expert
+Worked with AWS for several months on a team project.,AWS,Intermediate
+Contributed to a project using Node.js during an internship.,Node.js,Intermediate
+Have read the documentation for C++ but limited practical use.,C++,Beginner
+Extensive production experience with Flask at scale.,Flask,Expert
+Regularly use GraphQL for day-to-day development tasks.,GraphQL,Intermediate
+Five years of professional experience with Next.js.,Next.js,Expert
+"Deep expertise in Go, including advanced patterns and internals.",Go,Expert
+Have read the documentation for PostgreSQL but limited practical use.,PostgreSQL,Beginner
+Five years of professional experience with Deep Learning.,Deep Learning,Expert
+Regularly use SQL for day-to-day development tasks.,SQL,Intermediate
+Built and maintained mission-critical infrastructure with Django.,Django,Expert
+Some hands-on experience with SQL in small assignments.,SQL,Beginner
+Recognized internally as the go-to expert on Flask.,Flask,Expert
+Used Redis extensively during a semester-long project.,Redis,Intermediate
+Architected scalable solutions using TypeScript for enterprise clients.,TypeScript,Expert
+Designed the core architecture of a large-scale Python application.,Python,Expert
+Some hands-on experience with PyTorch in small assignments.,PyTorch,Beginner
+Used Git to build a personal project.,Git,Intermediate
+Developed features using JavaScript in a small team.,JavaScript,Intermediate
+Currently learning GraphQL as part of a bootcamp.,GraphQL,Beginner
+Some hands-on experience with Kubernetes in small assignments.,Kubernetes,Beginner
+Basic understanding of Python.,Python,Beginner
+Comfortable writing JavaScript code for medium-sized applications.,JavaScript,Intermediate
+Started exploring GraphQL recently.,GraphQL,Beginner
+Currently learning JavaScript as part of a bootcamp.,JavaScript,Beginner
+Published technical talks on advanced MongoDB techniques.,MongoDB,Expert
+Applied Docker to solve practical problems in coursework.,Docker,Intermediate
+Basic understanding of GraphQL.,GraphQL,Beginner
+Only used GraphQL in a couple of homework assignments.,GraphQL,Beginner
+Some hands-on experience with JavaScript in small assignments.,JavaScript,Beginner
+Drove major performance improvements in a Java-based system.,Java,Expert
+Optimized performance-critical systems built with Flask.,Flask,Expert
+Developed features using CI/CD in a small team.,CI/CD,Intermediate
+Extensive production experience with MongoDB at scale.,MongoDB,Expert
+Built a full application using Kubernetes.,Kubernetes,Intermediate
+Drove major performance improvements in a AWS-based system.,AWS,Expert
+Drove major performance improvements in a Kubernetes-based system.,Kubernetes,Expert
+Two years of hands-on experience with Next.js.,Next.js,Intermediate
+Completed an introductory course in REST API.,REST API,Beginner
+Currently learning C++ as part of a bootcamp.,C++,Beginner
+Trained the engineering team on advanced Redis concepts.,Redis,Expert
+Developed features using React in a small team.,React,Intermediate
+Trained the engineering team on advanced Node.js concepts.,Node.js,Expert
+Extensive production experience with Go at scale.,Go,Expert
+Used Java to build a personal project.,Java,Intermediate
+Recognized internally as the go-to expert on PostgreSQL.,PostgreSQL,Expert
+Solid working knowledge of Node.js from an internship.,Node.js,Intermediate
+Took an online tutorial on Linux.,Linux,Beginner
+Two years of hands-on experience with JavaScript.,JavaScript,Intermediate
+Extensive production experience with Kubernetes at scale.,Kubernetes,Expert
+Built a full application using AWS.,AWS,Intermediate
+Basic understanding of Kubernetes.,Kubernetes,Beginner
+Extensive production experience with JavaScript at scale.,JavaScript,Expert
+Beginner-level knowledge of Django.,Django,Beginner
+Developed features using REST API in a small team.,REST API,Intermediate
+Optimized performance-critical systems built with Java.,Java,Expert
+Built and maintained mission-critical infrastructure with Go.,Go,Expert
+Applied JavaScript to solve practical problems in coursework.,JavaScript,Intermediate
+Some hands-on experience with PHP in small assignments.,PHP,Beginner
+"Deep expertise in TypeScript, including advanced patterns and internals.",TypeScript,Expert
+Can independently build features using Machine Learning with some guidance.,Machine Learning,Intermediate
+Owned the technical roadmap for a major MongoDB migration.,MongoDB,Expert
+Five years of professional experience with MongoDB.,MongoDB,Expert
+Exposed to React during a university project.,React,Beginner
+Following a beginner course on Flask right now.,Flask,Beginner
+Exposed to Git during a university project.,Git,Beginner
+Can independently build features using Go with some guidance.,Go,Intermediate
+Familiar with Deep Learning through coursework.,Deep Learning,Beginner
+Led a team building production systems with JavaScript.,JavaScript,Expert
+Worked with React for several months on a team project.,React,Intermediate
+Beginner-level knowledge of Redis.,Redis,Beginner
+Owned the technical roadmap for a major Django migration.,Django,Expert
+Currently learning Java as part of a bootcamp.,Java,Beginner
+Currently learning Django as part of a bootcamp.,Django,Beginner
+Used Linux to build a personal project.,Linux,Intermediate
+Currently learning Docker as part of a bootcamp.,Docker,Beginner
+Applied REST API to solve practical problems in coursework.,REST API,Intermediate
+Optimized performance-critical systems built with Linux.,Linux,Expert
+Only used AWS in a couple of homework assignments.,AWS,Beginner
+Familiar with REST API through coursework.,REST API,Beginner
+Used Git extensively during a semester-long project.,Git,Intermediate
+Took an online tutorial on GraphQL.,GraphQL,Beginner
+Developed features using Flask in a small team.,Flask,Intermediate
+Wrote a few small scripts using Node.js.,Node.js,Beginner
+Regularly use Flask for day-to-day development tasks.,Flask,Intermediate
+Used Next.js extensively during a semester-long project.,Next.js,Intermediate
+Studied the fundamentals of REST API in class.,REST API,Beginner
+Have shipped a couple of side projects built with Python.,Python,Intermediate
+Contributed to open-source projects related to Node.js.,Node.js,Expert
+"New to PHP, still getting comfortable with the basics.",PHP,Beginner
+Extensive production experience with Tailwind CSS at scale.,Tailwind CSS,Expert
+Basic understanding of AWS.,AWS,Beginner
+Built and maintained mission-critical infrastructure with AWS.,AWS,Expert
+Can independently build features using Kubernetes with some guidance.,Kubernetes,Intermediate
+Familiar with Git through coursework.,Git,Beginner
+Designed the core architecture of a large-scale Tailwind CSS application.,Tailwind CSS,Expert
+Can independently build features using Next.js with some guidance.,Next.js,Intermediate
+Wrote a few small scripts using TensorFlow.,TensorFlow,Beginner
+Mentored junior developers on best practices in Machine Learning.,Machine Learning,Expert
+Led a team building production systems with TensorFlow.,TensorFlow,Expert
+One year of experience working with Python.,Python,Intermediate
+Built a full application using Next.js.,Next.js,Intermediate
+Published technical talks on advanced CI/CD techniques.,CI/CD,Expert
+Published technical talks on advanced Tailwind CSS techniques.,Tailwind CSS,Expert
+Studied the fundamentals of PHP in class.,PHP,Beginner
+Familiar with Java through coursework.,Java,Beginner
+Five years of professional experience with TensorFlow.,TensorFlow,Expert
+Started exploring Linux recently.,Linux,Beginner
+Extensive production experience with GraphQL at scale.,GraphQL,Expert
+Can independently build features using React with some guidance.,React,Intermediate
+Comfortable writing Flask code for medium-sized applications.,Flask,Intermediate
+Have read the documentation for MongoDB but limited practical use.,MongoDB,Beginner
+Used PostgreSQL to build a personal project.,PostgreSQL,Intermediate
+Published technical talks on advanced TensorFlow techniques.,TensorFlow,Expert
+Took an online tutorial on TensorFlow.,TensorFlow,Beginner
+Applied Linux to solve practical problems in coursework.,Linux,Intermediate
+Only used Node.js in a couple of homework assignments.,Node.js,Beginner
+Only used CI/CD in a couple of homework assignments.,CI/CD,Beginner
+Optimized performance-critical systems built with NestJS.,NestJS,Expert
+Worked with TypeScript for several months on a team project.,TypeScript,Intermediate
+Beginner-level knowledge of CI/CD.,CI/CD,Beginner
+Have read the documentation for PyTorch but limited practical use.,PyTorch,Beginner
+Familiar with MongoDB through coursework.,MongoDB,Beginner
+Following a beginner course on Python right now.,Python,Beginner
+Took an online tutorial on JavaScript.,JavaScript,Beginner
+Two years of hands-on experience with Tailwind CSS.,Tailwind CSS,Intermediate
+Completed an introductory course in PyTorch.,PyTorch,Beginner
+Used CI/CD extensively during a semester-long project.,CI/CD,Intermediate
+Basic understanding of Go.,Go,Beginner
+Have read the documentation for Java but limited practical use.,Java,Beginner
+Recognized internally as the go-to expert on Git.,Git,Expert
+Applied Node.js to solve practical problems in coursework.,Node.js,Intermediate
+Have read the documentation for Machine Learning but limited practical use.,Machine Learning,Beginner
+Designed the core architecture of a large-scale Redis application.,Redis,Expert
+Exposed to Machine Learning during a university project.,Machine Learning,Beginner
+Published technical talks on advanced Linux techniques.,Linux,Expert
+Took an online tutorial on Kubernetes.,Kubernetes,Beginner
+Completed an introductory course in Flask.,Flask,Beginner
+Mentored junior developers on best practices in TensorFlow.,TensorFlow,Expert
+"New to React, still getting comfortable with the basics.",React,Beginner
+Recognized internally as the go-to expert on REST API.,REST API,Expert
+Implemented core functionality with AWS in a group project.,AWS,Intermediate
+Five years of professional experience with Machine Learning.,Machine Learning,Expert
+Started exploring C++ recently.,C++,Beginner
+Architected scalable solutions using JavaScript for enterprise clients.,JavaScript,Expert
+Built a full application using Machine Learning.,Machine Learning,Intermediate
+Led a team building production systems with C++.,C++,Expert
+Used Flask extensively during a semester-long project.,Flask,Intermediate
+Regularly use Machine Learning for day-to-day development tasks.,Machine Learning,Intermediate
+Implemented core functionality with TensorFlow in a group project.,TensorFlow,Intermediate
+Have read the documentation for Linux but limited practical use.,Linux,Beginner
+Have shipped a couple of side projects built with Kubernetes.,Kubernetes,Intermediate
+Only used Tailwind CSS in a couple of homework assignments.,Tailwind CSS,Beginner
+Five years of professional experience with AWS.,AWS,Expert
+Contributed to a project using Linux during an internship.,Linux,Intermediate
+Developed features using Java in a small team.,Java,Intermediate
+Took an online tutorial on React.,React,Beginner
+Following a beginner course on Node.js right now.,Node.js,Beginner
+Optimized performance-critical systems built with PostgreSQL.,PostgreSQL,Expert
+Worked with Linux for several months on a team project.,Linux,Intermediate
+Have shipped a couple of side projects built with MongoDB.,MongoDB,Intermediate
+Currently learning PHP as part of a bootcamp.,PHP,Beginner
+Contributed to open-source projects related to Machine Learning.,Machine Learning,Expert
+Extensive production experience with AWS at scale.,AWS,Expert
+Two years of hands-on experience with C++.,C++,Intermediate
+Contributed to open-source projects related to NestJS.,NestJS,Expert
+Studied the fundamentals of Tailwind CSS in class.,Tailwind CSS,Beginner
+Following a beginner course on Tailwind CSS right now.,Tailwind CSS,Beginner
+Only used REST API in a couple of homework assignments.,REST API,Beginner
+Built and maintained mission-critical infrastructure with CI/CD.,CI/CD,Expert
+Applied TensorFlow to solve practical problems in coursework.,TensorFlow,Intermediate
+Have shipped a couple of side projects built with C++.,C++,Intermediate
+Basic understanding of Docker.,Docker,Beginner
+Mentored junior developers on best practices in C++.,C++,Expert
+Architected scalable solutions using AWS for enterprise clients.,AWS,Expert
+Can independently build features using Linux with some guidance.,Linux,Intermediate
+Five years of professional experience with Node.js.,Node.js,Expert
+Built a full application using Flask.,Flask,Intermediate
+Implemented core functionality with Node.js in a group project.,Node.js,Intermediate
+Contributed to a project using PHP during an internship.,PHP,Intermediate
+Contributed to open-source projects related to TensorFlow.,TensorFlow,Expert
+Contributed to open-source projects related to CI/CD.,CI/CD,Expert
+Built and maintained mission-critical infrastructure with Machine Learning.,Machine Learning,Expert
+Familiar with TensorFlow through coursework.,TensorFlow,Beginner
+Published technical talks on advanced Django techniques.,Django,Expert
+Studied the fundamentals of C++ in class.,C++,Beginner
+"Deep expertise in Python, including advanced patterns and internals.",Python,Expert
+Studied the fundamentals of Kubernetes in class.,Kubernetes,Beginner
+Only used Kubernetes in a couple of homework assignments.,Kubernetes,Beginner
+Contributed to a project using Deep Learning during an internship.,Deep Learning,Intermediate
+Following a beginner course on PHP right now.,PHP,Beginner
+Trained the engineering team on advanced Docker concepts.,Docker,Expert
+Used React to build a personal project.,React,Intermediate
+Drove major performance improvements in a MongoDB-based system.,MongoDB,Expert
+Completed an introductory course in Kubernetes.,Kubernetes,Beginner
+Regularly use Next.js for day-to-day development tasks.,Next.js,Intermediate
+Solid working knowledge of Go from an internship.,Go,Intermediate
+Regularly use Java for day-to-day development tasks.,Java,Intermediate
+Developed features using PyTorch in a small team.,PyTorch,Intermediate
+Designed the core architecture of a large-scale TensorFlow application.,TensorFlow,Expert
+Owned the technical roadmap for a major AWS migration.,AWS,Expert
+Took an online tutorial on SQL.,SQL,Beginner
+Contributed to open-source projects related to Redis.,Redis,Expert
+Exposed to C++ during a university project.,C++,Beginner
+Recognized internally as the go-to expert on Machine Learning.,Machine Learning,Expert
+Have shipped a couple of side projects built with Tailwind CSS.,Tailwind CSS,Intermediate
+Wrote a few small scripts using Django.,Django,Beginner
+Owned the technical roadmap for a major TypeScript migration.,TypeScript,Expert
+Published technical talks on advanced GraphQL techniques.,GraphQL,Expert
+Started exploring Kubernetes recently.,Kubernetes,Beginner
+Used C++ extensively during a semester-long project.,C++,Intermediate
+Optimized performance-critical systems built with CI/CD.,CI/CD,Expert
+Built and maintained mission-critical infrastructure with Git.,Git,Expert
+Basic understanding of Linux.,Linux,Beginner
+Drove major performance improvements in a Docker-based system.,Docker,Expert
+Five years of professional experience with Git.,Git,Expert
+Mentored junior developers on best practices in AWS.,AWS,Expert
+Regularly use Redis for day-to-day development tasks.,Redis,Intermediate
+Owned the technical roadmap for a major Docker migration.,Docker,Expert
+Basic understanding of TypeScript.,TypeScript,Beginner
+"New to CI/CD, still getting comfortable with the basics.",CI/CD,Beginner
+Familiar with GraphQL through coursework.,GraphQL,Beginner
+Owned the technical roadmap for a major PostgreSQL migration.,PostgreSQL,Expert
+Exposed to CI/CD during a university project.,CI/CD,Beginner
+Contributed to open-source projects related to GraphQL.,GraphQL,Expert
+Have shipped a couple of side projects built with Java.,Java,Intermediate
+Optimized performance-critical systems built with C++.,C++,Expert
+Architected scalable solutions using Django for enterprise clients.,Django,Expert
+Can independently build features using Tailwind CSS with some guidance.,Tailwind CSS,Intermediate
+Five years of professional experience with Python.,Python,Expert
+Five years of professional experience with Go.,Go,Expert
+Took an online tutorial on NestJS.,NestJS,Beginner
+Owned the technical roadmap for a major Node.js migration.,Node.js,Expert
+Designed the core architecture of a large-scale Node.js application.,Node.js,Expert
+Used PostgreSQL extensively during a semester-long project.,PostgreSQL,Intermediate
+Comfortable writing PHP code for medium-sized applications.,PHP,Intermediate
+Currently learning Flask as part of a bootcamp.,Flask,Beginner
+Can independently build features using NestJS with some guidance.,NestJS,Intermediate
+Drove major performance improvements in a PyTorch-based system.,PyTorch,Expert
+Trained the engineering team on advanced Flask concepts.,Flask,Expert
+Regularly use MongoDB for day-to-day development tasks.,MongoDB,Intermediate
+Used Flask to build a personal project.,Flask,Intermediate
+Exposed to TensorFlow during a university project.,TensorFlow,Beginner
+Beginner-level knowledge of PostgreSQL.,PostgreSQL,Beginner
+Took an online tutorial on C++.,C++,Beginner
+Drove major performance improvements in a Git-based system.,Git,Expert
+Owned the technical roadmap for a major Next.js migration.,Next.js,Expert
+Contributed to open-source projects related to Go.,Go,Expert
+Used C++ to build a personal project.,C++,Intermediate
+Architected scalable solutions using Git for enterprise clients.,Git,Expert
+Contributed to open-source projects related to C++.,C++,Expert
+Contributed to open-source projects related to REST API.,REST API,Expert
+Have read the documentation for Django but limited practical use.,Django,Beginner
+One year of experience working with PHP.,PHP,Intermediate
+Wrote a few small scripts using PyTorch.,PyTorch,Beginner
+Regularly use Go for day-to-day development tasks.,Go,Intermediate
+Extensive production experience with Next.js at scale.,Next.js,Expert
+Published technical talks on advanced Deep Learning techniques.,Deep Learning,Expert
+Basic understanding of React.,React,Beginner
+Five years of professional experience with JavaScript.,JavaScript,Expert
+Five years of professional experience with PHP.,PHP,Expert
+Published technical talks on advanced Next.js techniques.,Next.js,Expert
+Designed the core architecture of a large-scale Linux application.,Linux,Expert
+Can independently build features using SQL with some guidance.,SQL,Intermediate
+Drove major performance improvements in a Redis-based system.,Redis,Expert
+Trained the engineering team on advanced Deep Learning concepts.,Deep Learning,Expert
+Owned the technical roadmap for a major PHP migration.,PHP,Expert
+Solid working knowledge of CI/CD from an internship.,CI/CD,Intermediate
+Took an online tutorial on Git.,Git,Beginner
+Extensive production experience with React at scale.,React,Expert
+Regularly use Node.js for day-to-day development tasks.,Node.js,Intermediate
+Started exploring JavaScript recently.,JavaScript,Beginner
+Drove major performance improvements in a Flask-based system.,Flask,Expert
+"New to Django, still getting comfortable with the basics.",Django,Beginner
+Recognized internally as the go-to expert on Kubernetes.,Kubernetes,Expert
+Only used MongoDB in a couple of homework assignments.,MongoDB,Beginner
+Have read the documentation for SQL but limited practical use.,SQL,Beginner
+Completed an introductory course in Redis.,Redis,Beginner
+Currently learning CI/CD as part of a bootcamp.,CI/CD,Beginner
+Optimized performance-critical systems built with Git.,Git,Expert
+Used REST API extensively during a semester-long project.,REST API,Intermediate
+Architected scalable solutions using CI/CD for enterprise clients.,CI/CD,Expert
+Completed an introductory course in Linux.,Linux,Beginner
+Started exploring AWS recently.,AWS,Beginner
+"Deep expertise in NestJS, including advanced patterns and internals.",NestJS,Expert
+Regularly use React for day-to-day development tasks.,React,Intermediate
+Led a team building production systems with Tailwind CSS.,Tailwind CSS,Expert
+Owned the technical roadmap for a major Git migration.,Git,Expert
+Comfortable writing Java code for medium-sized applications.,Java,Intermediate
+Studied the fundamentals of MongoDB in class.,MongoDB,Beginner
+Only used TypeScript in a couple of homework assignments.,TypeScript,Beginner
+Exposed to Django during a university project.,Django,Beginner
+Developed features using PHP in a small team.,PHP,Intermediate
+Following a beginner course on PyTorch right now.,PyTorch,Beginner
+Trained the engineering team on advanced Go concepts.,Go,Expert
+Used PyTorch to build a personal project.,PyTorch,Intermediate
+Led a team building production systems with Redis.,Redis,Expert
+Led a team building production systems with TypeScript.,TypeScript,Expert
+Contributed to a project using Django during an internship.,Django,Intermediate
+Architected scalable solutions using Machine Learning for enterprise clients.,Machine Learning,Expert
+Studied the fundamentals of Flask in class.,Flask,Beginner
+Used TensorFlow to build a personal project.,TensorFlow,Intermediate
+Have shipped a couple of side projects built with PyTorch.,PyTorch,Intermediate
+Mentored junior developers on best practices in PostgreSQL.,PostgreSQL,Expert
+Contributed to open-source projects related to JavaScript.,JavaScript,Expert
+One year of experience working with PostgreSQL.,PostgreSQL,Intermediate
+Following a beginner course on React right now.,React,Beginner
+Exposed to Python during a university project.,Python,Beginner
+Led a team building production systems with Django.,Django,Expert
+Started exploring PHP recently.,PHP,Beginner
+Can independently build features using GraphQL with some guidance.,GraphQL,Intermediate
+Have shipped a couple of side projects built with Redis.,Redis,Intermediate
+"Deep expertise in Linux, including advanced patterns and internals.",Linux,Expert
+Contributed to a project using PostgreSQL during an internship.,PostgreSQL,Intermediate
+Built a full application using CI/CD.,CI/CD,Intermediate
+Following a beginner course on CI/CD right now.,CI/CD,Beginner
+Extensive production experience with Redis at scale.,Redis,Expert
+Architected scalable solutions using C++ for enterprise clients.,C++,Expert
+Two years of hands-on experience with PHP.,PHP,Intermediate
+Started exploring Go recently.,Go,Beginner
+"Deep expertise in Java, including advanced patterns and internals.",Java,Expert
+Owned the technical roadmap for a major TensorFlow migration.,TensorFlow,Expert
+Only used Next.js in a couple of homework assignments.,Next.js,Beginner
+Mentored junior developers on best practices in CI/CD.,CI/CD,Expert
+Extensive production experience with CI/CD at scale.,CI/CD,Expert
+Implemented core functionality with Next.js in a group project.,Next.js,Intermediate
+Have read the documentation for Tailwind CSS but limited practical use.,Tailwind CSS,Beginner
+Regularly use Linux for day-to-day development tasks.,Linux,Intermediate
+Regularly use Python for day-to-day development tasks.,Python,Intermediate
+Some hands-on experience with Machine Learning in small assignments.,Machine Learning,Beginner
+Owned the technical roadmap for a major Python migration.,Python,Expert
+One year of experience working with Next.js.,Next.js,Intermediate
+Wrote a few small scripts using React.,React,Beginner
+Solid working knowledge of Flask from an internship.,Flask,Intermediate
+Have shipped a couple of side projects built with Linux.,Linux,Intermediate
+Extensive production experience with TensorFlow at scale.,TensorFlow,Expert
+Can independently build features using TypeScript with some guidance.,TypeScript,Intermediate
+Wrote a few small scripts using Flask.,Flask,Beginner
+Familiar with PHP through coursework.,PHP,Beginner
+One year of experience working with MongoDB.,MongoDB,Intermediate
+Used NestJS extensively during a semester-long project.,NestJS,Intermediate
+Basic understanding of C++.,C++,Beginner
+Mentored junior developers on best practices in Kubernetes.,Kubernetes,Expert
+Used Node.js extensively during a semester-long project.,Node.js,Intermediate
+Owned the technical roadmap for a major Linux migration.,Linux,Expert
+Extensive production experience with Node.js at scale.,Node.js,Expert
+Used REST API to build a personal project.,REST API,Intermediate
+Started exploring Deep Learning recently.,Deep Learning,Beginner
+Familiar with Tailwind CSS through coursework.,Tailwind CSS,Beginner
+Implemented core functionality with Tailwind CSS in a group project.,Tailwind CSS,Intermediate
+Beginner-level knowledge of NestJS.,NestJS,Beginner
+Used Redis to build a personal project.,Redis,Intermediate
+Completed an introductory course in Java.,Java,Beginner
+Solid working knowledge of PyTorch from an internship.,PyTorch,Intermediate
+Completed an introductory course in Node.js.,Node.js,Beginner
+Solid working knowledge of React from an internship.,React,Intermediate
+Solid working knowledge of Next.js from an internship.,Next.js,Intermediate
+Built a full application using TypeScript.,TypeScript,Intermediate
+"Deep expertise in Tailwind CSS, including advanced patterns and internals.",Tailwind CSS,Expert
+Built and maintained mission-critical infrastructure with Next.js.,Next.js,Expert
+Exposed to Docker during a university project.,Docker,Beginner
+Built and maintained mission-critical infrastructure with Deep Learning.,Deep Learning,Expert
+Currently learning Redis as part of a bootcamp.,Redis,Beginner
+Beginner-level knowledge of Go.,Go,Beginner
+Mentored junior developers on best practices in Go.,Go,Expert
+Developed features using Kubernetes in a small team.,Kubernetes,Intermediate
+Some hands-on experience with Redis in small assignments.,Redis,Beginner
+Built and maintained mission-critical infrastructure with REST API.,REST API,Expert
+Trained the engineering team on advanced Python concepts.,Python,Expert
+Designed the core architecture of a large-scale Django application.,Django,Expert
+Regularly use TypeScript for day-to-day development tasks.,TypeScript,Intermediate
+Completed an introductory course in SQL.,SQL,Beginner
+Recognized internally as the go-to expert on CI/CD.,CI/CD,Expert
+Currently learning SQL as part of a bootcamp.,SQL,Beginner
+Five years of professional experience with Kubernetes.,Kubernetes,Expert
+Have read the documentation for TensorFlow but limited practical use.,TensorFlow,Beginner
+Have shipped a couple of side projects built with TensorFlow.,TensorFlow,Intermediate
+Started exploring Django recently.,Django,Beginner
+Beginner-level knowledge of TypeScript.,TypeScript,Beginner
+Owned the technical roadmap for a major Tailwind CSS migration.,Tailwind CSS,Expert
+Two years of hands-on experience with Git.,Git,Intermediate
+Only used Machine Learning in a couple of homework assignments.,Machine Learning,Beginner
+Basic understanding of MongoDB.,MongoDB,Beginner
+Familiar with JavaScript through coursework.,JavaScript,Beginner
+Two years of hands-on experience with React.,React,Intermediate
+Drove major performance improvements in a JavaScript-based system.,JavaScript,Expert
+Five years of professional experience with GraphQL.,GraphQL,Expert
+Optimized performance-critical systems built with PyTorch.,PyTorch,Expert
+Applied NestJS to solve practical problems in coursework.,NestJS,Intermediate
+Have shipped a couple of side projects built with Go.,Go,Intermediate
+Contributed to open-source projects related to Django.,Django,Expert
+Owned the technical roadmap for a major Flask migration.,Flask,Expert
+Some hands-on experience with Git in small assignments.,Git,Beginner
+Implemented core functionality with Machine Learning in a group project.,Machine Learning,Intermediate
+Have read the documentation for Kubernetes but limited practical use.,Kubernetes,Beginner
+Built and maintained mission-critical infrastructure with Node.js.,Node.js,Expert
+One year of experience working with Machine Learning.,Machine Learning,Intermediate
+Following a beginner course on Kubernetes right now.,Kubernetes,Beginner
+Optimized performance-critical systems built with SQL.,SQL,Expert
+Worked with Tailwind CSS for several months on a team project.,Tailwind CSS,Intermediate
+Only used Django in a couple of homework assignments.,Django,Beginner
+Extensive production experience with NestJS at scale.,NestJS,Expert
+Published technical talks on advanced Node.js techniques.,Node.js,Expert
+Solid working knowledge of Java from an internship.,Java,Intermediate
+Optimized performance-critical systems built with Go.,Go,Expert
+Mentored junior developers on best practices in PyTorch.,PyTorch,Expert
+Trained the engineering team on advanced AWS concepts.,AWS,Expert
+Two years of hands-on experience with AWS.,AWS,Intermediate
+Have read the documentation for GraphQL but limited practical use.,GraphQL,Beginner
+Built and maintained mission-critical infrastructure with MongoDB.,MongoDB,Expert
+Applied Next.js to solve practical problems in coursework.,Next.js,Intermediate
+Solid working knowledge of REST API from an internship.,REST API,Intermediate
+Started exploring Next.js recently.,Next.js,Beginner
+Contributed to a project using AWS during an internship.,AWS,Intermediate
+Regularly use PHP for day-to-day development tasks.,PHP,Intermediate
+Implemented core functionality with TypeScript in a group project.,TypeScript,Intermediate
+Led a team building production systems with Java.,Java,Expert
+Drove major performance improvements in a Django-based system.,Django,Expert
+Studied the fundamentals of NestJS in class.,NestJS,Beginner
+Can independently build features using C++ with some guidance.,C++,Intermediate
+Took an online tutorial on Go.,Go,Beginner
+Comfortable writing Django code for medium-sized applications.,Django,Intermediate
+Completed an introductory course in Next.js.,Next.js,Beginner
+Can independently build features using PHP with some guidance.,PHP,Intermediate
+Extensive production experience with Java at scale.,Java,Expert
+Designed the core architecture of a large-scale C++ application.,C++,Expert
+Optimized performance-critical systems built with Docker.,Docker,Expert
+Started exploring React recently.,React,Beginner
+Drove major performance improvements in a React-based system.,React,Expert
+Drove major performance improvements in a TensorFlow-based system.,TensorFlow,Expert
+Worked with Go for several months on a team project.,Go,Intermediate
+Studied the fundamentals of Redis in class.,Redis,Beginner
+Implemented core functionality with GraphQL in a group project.,GraphQL,Intermediate
+Five years of professional experience with NestJS.,NestJS,Expert
+Completed an introductory course in AWS.,AWS,Beginner
+Developed features using MongoDB in a small team.,MongoDB,Intermediate
+Trained the engineering team on advanced PyTorch concepts.,PyTorch,Expert
+Comfortable writing Next.js code for medium-sized applications.,Next.js,Intermediate
+Only used Deep Learning in a couple of homework assignments.,Deep Learning,Beginner
+Led a team building production systems with PostgreSQL.,PostgreSQL,Expert
+Exposed to PHP during a university project.,PHP,Beginner
+Optimized performance-critical systems built with PHP.,PHP,Expert
+Following a beginner course on Java right now.,Java,Beginner
+One year of experience working with Tailwind CSS.,Tailwind CSS,Intermediate
+Recognized internally as the go-to expert on Django.,Django,Expert
+Completed an introductory course in JavaScript.,JavaScript,Beginner
+Solid working knowledge of Django from an internship.,Django,Intermediate
+Five years of professional experience with Docker.,Docker,Expert
+"Deep expertise in PHP, including advanced patterns and internals.",PHP,Expert
+Mentored junior developers on best practices in Java.,Java,Expert
+Studied the fundamentals of AWS in class.,AWS,Beginner
+Have read the documentation for Redis but limited practical use.,Redis,Beginner
+Applied React to solve practical problems in coursework.,React,Intermediate
+Led a team building production systems with Next.js.,Next.js,Expert
+Published technical talks on advanced PyTorch techniques.,PyTorch,Expert
+Studied the fundamentals of Python in class.,Python,Beginner
+Optimized performance-critical systems built with Node.js.,Node.js,Expert
+"New to Machine Learning, still getting comfortable with the basics.",Machine Learning,Beginner
+"New to NestJS, still getting comfortable with the basics.",NestJS,Beginner
+Solid working knowledge of Tailwind CSS from an internship.,Tailwind CSS,Intermediate
+Owned the technical roadmap for a major C++ migration.,C++,Expert
+Used Java extensively during a semester-long project.,Java,Intermediate
+Some hands-on experience with PostgreSQL in small assignments.,PostgreSQL,Beginner
+Applied PHP to solve practical problems in coursework.,PHP,Intermediate
+Used SQL to build a personal project.,SQL,Intermediate
+Contributed to a project using Git during an internship.,Git,Intermediate
+Five years of professional experience with Tailwind CSS.,Tailwind CSS,Expert
+Can independently build features using PostgreSQL with some guidance.,PostgreSQL,Intermediate
+Exposed to JavaScript during a university project.,JavaScript,Beginner
+"New to PyTorch, still getting comfortable with the basics.",PyTorch,Beginner
+Basic understanding of Git.,Git,Beginner
+Regularly use AWS for day-to-day development tasks.,AWS,Intermediate
+Five years of professional experience with Java.,Java,Expert
+Led a team building production systems with Flask.,Flask,Expert
+Recognized internally as the go-to expert on Java.,Java,Expert
+Designed the core architecture of a large-scale GraphQL application.,GraphQL,Expert
+"New to SQL, still getting comfortable with the basics.",SQL,Beginner
+Applied PostgreSQL to solve practical problems in coursework.,PostgreSQL,Intermediate
+Basic understanding of Tailwind CSS.,Tailwind CSS,Beginner
+Beginner-level knowledge of TensorFlow.,TensorFlow,Beginner
+Developed features using TensorFlow in a small team.,TensorFlow,Intermediate
+Drove major performance improvements in a SQL-based system.,SQL,Expert
+Designed the core architecture of a large-scale Git application.,Git,Expert
+Currently learning Node.js as part of a bootcamp.,Node.js,Beginner
+Drove major performance improvements in a CI/CD-based system.,CI/CD,Expert
+Optimized performance-critical systems built with Tailwind CSS.,Tailwind CSS,Expert
+Used NestJS to build a personal project.,NestJS,Intermediate
+Two years of hands-on experience with TypeScript.,TypeScript,Intermediate
+Familiar with TypeScript through coursework.,TypeScript,Beginner
+"New to Docker, still getting comfortable with the basics.",Docker,Beginner
+Took an online tutorial on Flask.,Flask,Beginner
+Solid working knowledge of PostgreSQL from an internship.,PostgreSQL,Intermediate
+"Deep expertise in Django, including advanced patterns and internals.",Django,Expert
+Built a full application using Java.,Java,Intermediate
+Worked with SQL for several months on a team project.,SQL,Intermediate
+Comfortable writing Docker code for medium-sized applications.,Docker,Intermediate
+Comfortable writing AWS code for medium-sized applications.,AWS,Intermediate
+Led a team building production systems with Python.,Python,Expert
+Studied the fundamentals of Machine Learning in class.,Machine Learning,Beginner
+Recognized internally as the go-to expert on Next.js.,Next.js,Expert
+Owned the technical roadmap for a major GraphQL migration.,GraphQL,Expert
+Studied the fundamentals of Deep Learning in class.,Deep Learning,Beginner
+Exposed to MongoDB during a university project.,MongoDB,Beginner
+Used PyTorch extensively during a semester-long project.,PyTorch,Intermediate
+Have shipped a couple of side projects built with Flask.,Flask,Intermediate
+Used TypeScript to build a personal project.,TypeScript,Intermediate
+Trained the engineering team on advanced React concepts.,React,Expert
+Familiar with Go through coursework.,Go,Beginner
+Used Go to build a personal project.,Go,Intermediate
+Used Go extensively during a semester-long project.,Go,Intermediate
+Worked with Python for several months on a team project.,Python,Intermediate
+Took an online tutorial on MongoDB.,MongoDB,Beginner
+Architected scalable solutions using Deep Learning for enterprise clients.,Deep Learning,Expert
+Developed features using C++ in a small team.,C++,Intermediate
+Implemented core functionality with SQL in a group project.,SQL,Intermediate
+Contributed to open-source projects related to Linux.,Linux,Expert
+Five years of professional experience with TypeScript.,TypeScript,Expert
+Built a full application using Go.,Go,Intermediate
+Comfortable writing SQL code for medium-sized applications.,SQL,Intermediate
+Currently learning Kubernetes as part of a bootcamp.,Kubernetes,Beginner
+Applied Python to solve practical problems in coursework.,Python,Intermediate
+"New to Node.js, still getting comfortable with the basics.",Node.js,Beginner
+Contributed to open-source projects related to Python.,Python,Expert
+Published technical talks on advanced SQL techniques.,SQL,Expert
+Recognized internally as the go-to expert on NestJS.,NestJS,Expert
+Drove major performance improvements in a GraphQL-based system.,GraphQL,Expert
+Have shipped a couple of side projects built with PHP.,PHP,Intermediate
+Applied MongoDB to solve practical problems in coursework.,MongoDB,Intermediate
+Optimized performance-critical systems built with Django.,Django,Expert
+Have shipped a couple of side projects built with React.,React,Intermediate
+Have shipped a couple of side projects built with CI/CD.,CI/CD,Intermediate
+Can independently build features using PyTorch with some guidance.,PyTorch,Intermediate
+Basic understanding of Flask.,Flask,Beginner
+Architected scalable solutions using Flask for enterprise clients.,Flask,Expert
+Wrote a few small scripts using Docker.,Docker,Beginner
+Trained the engineering team on advanced Next.js concepts.,Next.js,Expert
+Worked with Flask for several months on a team project.,Flask,Intermediate
+Can independently build features using Git with some guidance.,Git,Intermediate
+Built and maintained mission-critical infrastructure with PostgreSQL.,PostgreSQL,Expert
+Built a full application using TensorFlow.,TensorFlow,Intermediate
+Basic understanding of PyTorch.,PyTorch,Beginner
+Comfortable writing REST API code for medium-sized applications.,REST API,Intermediate
+Trained the engineering team on advanced SQL concepts.,SQL,Expert
+Exposed to PostgreSQL during a university project.,PostgreSQL,Beginner
+Trained the engineering team on advanced NestJS concepts.,NestJS,Expert
+Implemented core functionality with MongoDB in a group project.,MongoDB,Intermediate
+Studied the fundamentals of JavaScript in class.,JavaScript,Beginner
+Used MongoDB to build a personal project.,MongoDB,Intermediate
+Extensive production experience with Docker at scale.,Docker,Expert
+Familiar with Docker through coursework.,Docker,Beginner
+Started exploring Node.js recently.,Node.js,Beginner
+Took an online tutorial on Next.js.,Next.js,Beginner
+Implemented core functionality with PostgreSQL in a group project.,PostgreSQL,Intermediate
+Built and maintained mission-critical infrastructure with Docker.,Docker,Expert
+Started exploring Flask recently.,Flask,Beginner
+Studied the fundamentals of Node.js in class.,Node.js,Beginner
+Designed the core architecture of a large-scale Docker application.,Docker,Expert
+Following a beginner course on MongoDB right now.,MongoDB,Beginner
+Trained the engineering team on advanced C++ concepts.,C++,Expert
+Worked with Kubernetes for several months on a team project.,Kubernetes,Intermediate
+Comfortable writing CI/CD code for medium-sized applications.,CI/CD,Intermediate
+"Deep expertise in REST API, including advanced patterns and internals.",REST API,Expert
+Familiar with CI/CD through coursework.,CI/CD,Beginner
+Mentored junior developers on best practices in Linux.,Linux,Expert
+Some hands-on experience with Java in small assignments.,Java,Beginner
+Implemented core functionality with CI/CD in a group project.,CI/CD,Intermediate
+Familiar with NestJS through coursework.,NestJS,Beginner
+"New to PostgreSQL, still getting comfortable with the basics.",PostgreSQL,Beginner
+Studied the fundamentals of Go in class.,Go,Beginner
+Regularly use Git for day-to-day development tasks.,Git,Intermediate
+Some hands-on experience with Go in small assignments.,Go,Beginner
+Published technical talks on advanced React techniques.,React,Expert
+Led a team building production systems with AWS.,AWS,Expert
+Only used TensorFlow in a couple of homework assignments.,TensorFlow,Beginner
+Started exploring Docker recently.,Docker,Beginner
+Five years of professional experience with Flask.,Flask,Expert
+Owned the technical roadmap for a major PyTorch migration.,PyTorch,Expert
+Architected scalable solutions using PHP for enterprise clients.,PHP,Expert
+Applied GraphQL to solve practical problems in coursework.,GraphQL,Intermediate
+Implemented core functionality with REST API in a group project.,REST API,Intermediate
+Applied C++ to solve practical problems in coursework.,C++,Intermediate
+Wrote a few small scripts using Git.,Git,Beginner
+Drove major performance improvements in a Go-based system.,Go,Expert
+Contributed to a project using Flask during an internship.,Flask,Intermediate
+Comfortable writing Git code for medium-sized applications.,Git,Intermediate
+Owned the technical roadmap for a major REST API migration.,REST API,Expert
+Two years of hands-on experience with Docker.,Docker,Intermediate
+Two years of hands-on experience with PostgreSQL.,PostgreSQL,Intermediate
+Following a beginner course on Redis right now.,Redis,Beginner
+Contributed to open-source projects related to Flask.,Flask,Expert
+Only used Go in a couple of homework assignments.,Go,Beginner
+Architected scalable solutions using PyTorch for enterprise clients.,PyTorch,Expert
+Drove major performance improvements in a Linux-based system.,Linux,Expert
+Contributed to a project using Redis during an internship.,Redis,Intermediate
+Recognized internally as the go-to expert on MongoDB.,MongoDB,Expert
+Built and maintained mission-critical infrastructure with Java.,Java,Expert
+Studied the fundamentals of GraphQL in class.,GraphQL,Beginner
+Recognized internally as the go-to expert on AWS.,AWS,Expert
+Led a team building production systems with Docker.,Docker,Expert
+Published technical talks on advanced Redis techniques.,Redis,Expert
+Led a team building production systems with React.,React,Expert
+Developed features using Django in a small team.,Django,Intermediate
+Only used Java in a couple of homework assignments.,Java,Beginner
+Two years of hands-on experience with Python.,Python,Intermediate
+Built a full application using JavaScript.,JavaScript,Intermediate
+Architected scalable solutions using TensorFlow for enterprise clients.,TensorFlow,Expert
+Drove major performance improvements in a TypeScript-based system.,TypeScript,Expert
+Led a team building production systems with Kubernetes.,Kubernetes,Expert
+Currently learning TensorFlow as part of a bootcamp.,TensorFlow,Beginner
+Wrote a few small scripts using Deep Learning.,Deep Learning,Beginner
+Used SQL extensively during a semester-long project.,SQL,Intermediate
+Can independently build features using TensorFlow with some guidance.,TensorFlow,Intermediate
+Familiar with PyTorch through coursework.,PyTorch,Beginner
+Currently learning AWS as part of a bootcamp.,AWS,Beginner
+Comfortable writing NestJS code for medium-sized applications.,NestJS,Intermediate
+Following a beginner course on Next.js right now.,Next.js,Beginner
+Worked with C++ for several months on a team project.,C++,Intermediate
+Used AWS extensively during a semester-long project.,AWS,Intermediate
+Familiar with Python through coursework.,Python,Beginner
+Trained the engineering team on advanced REST API concepts.,REST API,Expert
+Only used PostgreSQL in a couple of homework assignments.,PostgreSQL,Beginner
+One year of experience working with CI/CD.,CI/CD,Intermediate
+Contributed to open-source projects related to Kubernetes.,Kubernetes,Expert
+Beginner-level knowledge of C++.,C++,Beginner
+Completed an introductory course in TypeScript.,TypeScript,Beginner
+Following a beginner course on JavaScript right now.,JavaScript,Beginner
+Have shipped a couple of side projects built with NestJS.,NestJS,Intermediate
+"Deep expertise in Git, including advanced patterns and internals.",Git,Expert
+Trained the engineering team on advanced MongoDB concepts.,MongoDB,Expert
+Solid working knowledge of NestJS from an internship.,NestJS,Intermediate
+Developed features using Docker in a small team.,Docker,Intermediate
+Two years of hands-on experience with Go.,Go,Intermediate
+Comfortable writing Python code for medium-sized applications.,Python,Intermediate
+Comfortable writing PyTorch code for medium-sized applications.,PyTorch,Intermediate
+Architected scalable solutions using SQL for enterprise clients.,SQL,Expert
+Built a full application using PostgreSQL.,PostgreSQL,Intermediate
+Exposed to Redis during a university project.,Redis,Beginner
+Some hands-on experience with TypeScript in small assignments.,TypeScript,Beginner
+Built and maintained mission-critical infrastructure with PyTorch.,PyTorch,Expert
+Mentored junior developers on best practices in Next.js.,Next.js,Expert
+Two years of hands-on experience with Kubernetes.,Kubernetes,Intermediate
+Completed an introductory course in Git.,Git,Beginner
+Comfortable writing Kubernetes code for medium-sized applications.,Kubernetes,Intermediate
+One year of experience working with NestJS.,NestJS,Intermediate
+Led a team building production systems with Deep Learning.,Deep Learning,Expert
+Used Next.js to build a personal project.,Next.js,Intermediate
+Basic understanding of Deep Learning.,Deep Learning,Beginner
+Architected scalable solutions using Tailwind CSS for enterprise clients.,Tailwind CSS,Expert
+"Deep expertise in Flask, including advanced patterns and internals.",Flask,Expert
+Contributed to a project using Machine Learning during an internship.,Machine Learning,Intermediate
+Built a full application using Django.,Django,Intermediate
+Published technical talks on advanced PHP techniques.,PHP,Expert
+Some hands-on experience with REST API in small assignments.,REST API,Beginner
+Took an online tutorial on REST API.,REST API,Beginner
+Have read the documentation for Deep Learning but limited practical use.,Deep Learning,Beginner
+Started exploring Java recently.,Java,Beginner
+One year of experience working with Go.,Go,Intermediate
+Used TypeScript extensively during a semester-long project.,TypeScript,Intermediate
+Recognized internally as the go-to expert on Python.,Python,Expert
+Studied the fundamentals of Next.js in class.,Next.js,Beginner
+Contributed to a project using SQL during an internship.,SQL,Intermediate
+Used Kubernetes to build a personal project.,Kubernetes,Intermediate
+Beginner-level knowledge of Next.js.,Next.js,Beginner
+"New to Python, still getting comfortable with the basics.",Python,Beginner
+Used GraphQL to build a personal project.,GraphQL,Intermediate
+Basic understanding of SQL.,SQL,Beginner
+Mentored junior developers on best practices in Redis.,Redis,Expert
+One year of experience working with PyTorch.,PyTorch,Intermediate
+Can independently build features using JavaScript with some guidance.,JavaScript,Intermediate
+Wrote a few small scripts using PostgreSQL.,PostgreSQL,Beginner
+Wrote a few small scripts using Machine Learning.,Machine Learning,Beginner
+Built and maintained mission-critical infrastructure with TensorFlow.,TensorFlow,Expert
+Some hands-on experience with Deep Learning in small assignments.,Deep Learning,Beginner
+Built and maintained mission-critical infrastructure with React.,React,Expert
+Worked with REST API for several months on a team project.,REST API,Intermediate
+Can independently build features using Python with some guidance.,Python,Intermediate
+Two years of hands-on experience with Redis.,Redis,Intermediate
+Built and maintained mission-critical infrastructure with Kubernetes.,Kubernetes,Expert
+Wrote a few small scripts using TypeScript.,TypeScript,Beginner
+Built a full application using MongoDB.,MongoDB,Intermediate
+Basic understanding of REST API.,REST API,Beginner
+Two years of hands-on experience with Django.,Django,Intermediate
+Completed an introductory course in MongoDB.,MongoDB,Beginner
+One year of experience working with JavaScript.,JavaScript,Intermediate
+Completed an introductory course in Django.,Django,Beginner
+Five years of professional experience with PostgreSQL.,PostgreSQL,Expert
+Contributed to open-source projects related to React.,React,Expert
+Architected scalable solutions using Java for enterprise clients.,Java,Expert
+Owned the technical roadmap for a major Redis migration.,Redis,Expert
+Built and maintained mission-critical infrastructure with SQL.,SQL,Expert
+Designed the core architecture of a large-scale Go application.,Go,Expert
+Completed an introductory course in C++.,C++,Beginner
+Contributed to open-source projects related to Next.js.,Next.js,Expert
+Contributed to a project using C++ during an internship.,C++,Intermediate
+Completed an introductory course in TensorFlow.,TensorFlow,Beginner
+Designed the core architecture of a large-scale PHP application.,PHP,Expert
+Solid working knowledge of Git from an internship.,Git,Intermediate
+Worked with PHP for several months on a team project.,PHP,Intermediate
+Contributed to a project using JavaScript during an internship.,JavaScript,Intermediate
+Mentored junior developers on best practices in Docker.,Docker,Expert
+Currently learning Git as part of a bootcamp.,Git,Beginner
+Regularly use Tailwind CSS for day-to-day development tasks.,Tailwind CSS,Intermediate
+One year of experience working with C++.,C++,Intermediate
+Applied Kubernetes to solve practical problems in coursework.,Kubernetes,Intermediate
+Worked with PyTorch for several months on a team project.,PyTorch,Intermediate
+Contributed to a project using Tailwind CSS during an internship.,Tailwind CSS,Intermediate
+Two years of hands-on experience with Node.js.,Node.js,Intermediate
+Implemented core functionality with PyTorch in a group project.,PyTorch,Intermediate
+Architected scalable solutions using REST API for enterprise clients.,REST API,Expert
+Designed the core architecture of a large-scale AWS application.,AWS,Expert
+Solid working knowledge of Redis from an internship.,Redis,Intermediate
+Exposed to PyTorch during a university project.,PyTorch,Beginner
+Wrote a few small scripts using SQL.,SQL,Beginner
+Only used Linux in a couple of homework assignments.,Linux,Beginner
+Extensive production experience with SQL at scale.,SQL,Expert
+"Deep expertise in AWS, including advanced patterns and internals.",AWS,Expert
+Have read the documentation for TypeScript but limited practical use.,TypeScript,Beginner
+Familiar with PostgreSQL through coursework.,PostgreSQL,Beginner
+Completed an introductory course in Python.,Python,Beginner
+Built and maintained mission-critical infrastructure with Linux.,Linux,Expert
+Led a team building production systems with Git.,Git,Expert
+One year of experience working with Kubernetes.,Kubernetes,Intermediate
+Trained the engineering team on advanced Django concepts.,Django,Expert
+Completed an introductory course in NestJS.,NestJS,Beginner
+Studied the fundamentals of Docker in class.,Docker,Beginner
+Solid working knowledge of Linux from an internship.,Linux,Intermediate
+Used Django extensively during a semester-long project.,Django,Intermediate
+One year of experience working with Git.,Git,Intermediate
+Used GraphQL extensively during a semester-long project.,GraphQL,Intermediate
+Have shipped a couple of side projects built with TypeScript.,TypeScript,Intermediate
+Only used Flask in a couple of homework assignments.,Flask,Beginner
+Used JavaScript to build a personal project.,JavaScript,Intermediate
+Used Tailwind CSS to build a personal project.,Tailwind CSS,Intermediate
+Owned the technical roadmap for a major SQL migration.,SQL,Expert
+Implemented core functionality with JavaScript in a group project.,JavaScript,Intermediate
+Implemented core functionality with Django in a group project.,Django,Intermediate
+Exposed to Linux during a university project.,Linux,Beginner
+Contributed to open-source projects related to PyTorch.,PyTorch,Expert
+Took an online tutorial on PHP.,PHP,Beginner
+Designed the core architecture of a large-scale MongoDB application.,MongoDB,Expert
+Built a full application using Node.js.,Node.js,Intermediate
+Started exploring Machine Learning recently.,Machine Learning,Beginner
+Drove major performance improvements in a C++-based system.,C++,Expert
+Used Python to build a personal project.,Python,Intermediate
+Worked with CI/CD for several months on a team project.,CI/CD,Intermediate
+Published technical talks on advanced JavaScript techniques.,JavaScript,Expert
+"New to TypeScript, still getting comfortable with the basics.",TypeScript,Beginner
+Have read the documentation for Docker but limited practical use.,Docker,Beginner
+Studied the fundamentals of PyTorch in class.,PyTorch,Beginner
+Mentored junior developers on best practices in SQL.,SQL,Expert
+Used Deep Learning extensively during a semester-long project.,Deep Learning,Intermediate
+Used TensorFlow extensively during a semester-long project.,TensorFlow,Intermediate
+Studied the fundamentals of React in class.,React,Beginner
+Used Tailwind CSS extensively during a semester-long project.,Tailwind CSS,Intermediate
+Have shipped a couple of side projects built with JavaScript.,JavaScript,Intermediate
+Built a full application using React.,React,Intermediate
+Implemented core functionality with Kubernetes in a group project.,Kubernetes,Intermediate
+Drove major performance improvements in a Tailwind CSS-based system.,Tailwind CSS,Expert
+Following a beginner course on TensorFlow right now.,TensorFlow,Beginner
+Optimized performance-critical systems built with JavaScript.,JavaScript,Expert
+Drove major performance improvements in a PHP-based system.,PHP,Expert
+Can independently build features using Django with some guidance.,Django,Intermediate
+Have shipped a couple of side projects built with Machine Learning.,Machine Learning,Intermediate
+Regularly use PyTorch for day-to-day development tasks.,PyTorch,Intermediate
+Have read the documentation for Git but limited practical use.,Git,Beginner
+Regularly use PostgreSQL for day-to-day development tasks.,PostgreSQL,Intermediate
+Regularly use C++ for day-to-day development tasks.,C++,Intermediate
+Basic understanding of NestJS.,NestJS,Beginner
+Designed the core architecture of a large-scale Kubernetes application.,Kubernetes,Expert
+Used Linux extensively during a semester-long project.,Linux,Intermediate
+Have read the documentation for NestJS but limited practical use.,NestJS,Beginner
+Wrote a few small scripts using Tailwind CSS.,Tailwind CSS,Beginner
+Developed features using TypeScript in a small team.,TypeScript,Intermediate
+Have shipped a couple of side projects built with PostgreSQL.,PostgreSQL,Intermediate
+"New to C++, still getting comfortable with the basics.",C++,Beginner
+Wrote a few small scripts using PHP.,PHP,Beginner
+Used Docker to build a personal project.,Docker,Intermediate
+Architected scalable solutions using GraphQL for enterprise clients.,GraphQL,Expert
+Led a team building production systems with Go.,Go,Expert
+Beginner-level knowledge of Flask.,Flask,Beginner
+Contributed to a project using REST API during an internship.,REST API,Intermediate
+Trained the engineering team on advanced Git concepts.,Git,Expert
+Built and maintained mission-critical infrastructure with GraphQL.,GraphQL,Expert
+Published technical talks on advanced Kubernetes techniques.,Kubernetes,Expert
+One year of experience working with GraphQL.,GraphQL,Intermediate
+Contributed to a project using Go during an internship.,Go,Intermediate
+Built a full application using Docker.,Docker,Intermediate
+Optimized performance-critical systems built with Kubernetes.,Kubernetes,Expert
+Currently learning Python as part of a bootcamp.,Python,Beginner
+Designed the core architecture of a large-scale Machine Learning application.,Machine Learning,Expert
+Only used JavaScript in a couple of homework assignments.,JavaScript,Beginner
+Contributed to a project using TensorFlow during an internship.,TensorFlow,Intermediate
+Have shipped a couple of side projects built with Deep Learning.,Deep Learning,Intermediate
+Architected scalable solutions using MongoDB for enterprise clients.,MongoDB,Expert
+Contributed to open-source projects related to Git.,Git,Expert
+"New to AWS, still getting comfortable with the basics.",AWS,Beginner
+Some hands-on experience with Flask in small assignments.,Flask,Beginner
+Architected scalable solutions using React for enterprise clients.,React,Expert
+Comfortable writing Linux code for medium-sized applications.,Linux,Intermediate
+Developed features using PostgreSQL in a small team.,PostgreSQL,Intermediate
+Built and maintained mission-critical infrastructure with PHP.,PHP,Expert
+Beginner-level knowledge of Linux.,Linux,Beginner
+Contributed to a project using CI/CD during an internship.,CI/CD,Intermediate
+Drove major performance improvements in a Next.js-based system.,Next.js,Expert
+Familiar with Kubernetes through coursework.,Kubernetes,Beginner
+Comfortable writing GraphQL code for medium-sized applications.,GraphQL,Intermediate
+Extensive production experience with Linux at scale.,Linux,Expert
+Trained the engineering team on advanced CI/CD concepts.,CI/CD,Expert
+Comfortable writing PostgreSQL code for medium-sized applications.,PostgreSQL,Intermediate
+One year of experience working with React.,React,Intermediate
+"Deep expertise in PyTorch, including advanced patterns and internals.",PyTorch,Expert
+Familiar with Linux through coursework.,Linux,Beginner
+Familiar with Redis through coursework.,Redis,Beginner
+Designed the core architecture of a large-scale PostgreSQL application.,PostgreSQL,Expert
+Designed the core architecture of a large-scale React application.,React,Expert
+Recognized internally as the go-to expert on TensorFlow.,TensorFlow,Expert
+One year of experience working with Flask.,Flask,Intermediate
+Contributed to open-source projects related to MongoDB.,MongoDB,Expert
+Optimized performance-critical systems built with GraphQL.,GraphQL,Expert
+Led a team building production systems with Machine Learning.,Machine Learning,Expert
+Architected scalable solutions using Next.js for enterprise clients.,Next.js,Expert
+Familiar with Machine Learning through coursework.,Machine Learning,Beginner
+Extensive production experience with TypeScript at scale.,TypeScript,Expert
+"New to Redis, still getting comfortable with the basics.",Redis,Beginner
+Recognized internally as the go-to expert on SQL.,SQL,Expert
+Trained the engineering team on advanced JavaScript concepts.,JavaScript,Expert
+Have read the documentation for React but limited practical use.,React,Beginner
+Two years of hands-on experience with Flask.,Flask,Intermediate
+Contributed to open-source projects related to Java.,Java,Expert
+Completed an introductory course in PostgreSQL.,PostgreSQL,Beginner
+Published technical talks on advanced Docker techniques.,Docker,Expert
+Wrote a few small scripts using NestJS.,NestJS,Beginner
+Built a full application using GraphQL.,GraphQL,Intermediate
+"New to Flask, still getting comfortable with the basics.",Flask,Beginner
+Studied the fundamentals of Git in class.,Git,Beginner
+One year of experience working with Django.,Django,Intermediate
+Following a beginner course on Go right now.,Go,Beginner
+Comfortable writing React code for medium-sized applications.,React,Intermediate
+Published technical talks on advanced Python techniques.,Python,Expert
+Following a beginner course on SQL right now.,SQL,Beginner
+Worked with GraphQL for several months on a team project.,GraphQL,Intermediate
+Wrote a few small scripts using Kubernetes.,Kubernetes,Beginner
+Regularly use CI/CD for day-to-day development tasks.,CI/CD,Intermediate
+Contributed to open-source projects related to SQL.,SQL,Expert
+Applied Go to solve practical problems in coursework.,Go,Intermediate
+Extensive production experience with REST API at scale.,REST API,Expert
+Mentored junior developers on best practices in Node.js.,Node.js,Expert
+Have read the documentation for Node.js but limited practical use.,Node.js,Beginner
+Extensive production experience with Machine Learning at scale.,Machine Learning,Expert
+Contributed to open-source projects related to PostgreSQL.,PostgreSQL,Expert
+Basic understanding of CI/CD.,CI/CD,Beginner
+Contributed to a project using React during an internship.,React,Intermediate
+Basic understanding of Java.,Java,Beginner
+Studied the fundamentals of Java in class.,Java,Beginner
+Applied Redis to solve practical problems in coursework.,Redis,Intermediate
+Mentored junior developers on best practices in GraphQL.,GraphQL,Expert
+Beginner-level knowledge of Node.js.,Node.js,Beginner
+Exposed to AWS during a university project.,AWS,Beginner
+"Deep expertise in GraphQL, including advanced patterns and internals.",GraphQL,Expert
+Have read the documentation for REST API but limited practical use.,REST API,Beginner
+Designed the core architecture of a large-scale Deep Learning application.,Deep Learning,Expert
+Five years of professional experience with Redis.,Redis,Expert
+Basic understanding of Django.,Django,Beginner
+Wrote a few small scripts using C++.,C++,Beginner
+Designed the core architecture of a large-scale JavaScript application.,JavaScript,Expert
+Built a full application using REST API.,REST API,Intermediate
+Basic understanding of Next.js.,Next.js,Beginner
+Applied CI/CD to solve practical problems in coursework.,CI/CD,Intermediate
+Built and maintained mission-critical infrastructure with Flask.,Flask,Expert
+Led a team building production systems with Node.js.,Node.js,Expert
+Regularly use TensorFlow for day-to-day development tasks.,TensorFlow,Intermediate
+Can independently build features using Deep Learning with some guidance.,Deep Learning,Intermediate
+Only used C++ in a couple of homework assignments.,C++,Beginner
+Can independently build features using CI/CD with some guidance.,CI/CD,Intermediate
+Led a team building production systems with SQL.,SQL,Expert
+Built a full application using Git.,Git,Intermediate
+Optimized performance-critical systems built with REST API.,REST API,Expert
+Applied TypeScript to solve practical problems in coursework.,TypeScript,Intermediate
+Optimized performance-critical systems built with Redis.,Redis,Expert
+Worked with Docker for several months on a team project.,Docker,Intermediate
+Used AWS to build a personal project.,AWS,Intermediate
+Published technical talks on advanced Go techniques.,Go,Expert
+Developed features using Machine Learning in a small team.,Machine Learning,Intermediate
+Implemented core functionality with React in a group project.,React,Intermediate
+Implemented core functionality with C++ in a group project.,C++,Intermediate
+Drove major performance improvements in a PostgreSQL-based system.,PostgreSQL,Expert
+Built and maintained mission-critical infrastructure with Python.,Python,Expert
+Have shipped a couple of side projects built with Django.,Django,Intermediate
+Recognized internally as the go-to expert on Redis.,Redis,Expert
+Used Django to build a personal project.,Django,Intermediate
+Only used Python in a couple of homework assignments.,Python,Beginner
+Some hands-on experience with NestJS in small assignments.,NestJS,Beginner
+Solid working knowledge of Machine Learning from an internship.,Machine Learning,Intermediate
+Built and maintained mission-critical infrastructure with NestJS.,NestJS,Expert
+Studied the fundamentals of PostgreSQL in class.,PostgreSQL,Beginner
+Trained the engineering team on advanced GraphQL concepts.,GraphQL,Expert
+Built and maintained mission-critical infrastructure with Tailwind CSS.,Tailwind CSS,Expert
+Built and maintained mission-critical infrastructure with Redis.,Redis,Expert
+Completed an introductory course in CI/CD.,CI/CD,Beginner
+Published technical talks on advanced AWS techniques.,AWS,Expert
+Wrote a few small scripts using Java.,Java,Beginner
+Applied Flask to solve practical problems in coursework.,Flask,Intermediate
+Two years of hands-on experience with MongoDB.,MongoDB,Intermediate
+Following a beginner course on Machine Learning right now.,Machine Learning,Beginner
+Only used PyTorch in a couple of homework assignments.,PyTorch,Beginner
+Extensive production experience with Deep Learning at scale.,Deep Learning,Expert
+Only used PHP in a couple of homework assignments.,PHP,Beginner
+"New to Java, still getting comfortable with the basics.",Java,Beginner
+Built and maintained mission-critical infrastructure with C++.,C++,Expert
+Familiar with Node.js through coursework.,Node.js,Beginner
+Can independently build features using Java with some guidance.,Java,Intermediate
+Owned the technical roadmap for a major Java migration.,Java,Expert
+Beginner-level knowledge of Git.,Git,Beginner
+Took an online tutorial on Django.,Django,Beginner
+Can independently build features using Flask with some guidance.,Flask,Intermediate
+Exposed to Java during a university project.,Java,Beginner
+Have read the documentation for PHP but limited practical use.,PHP,Beginner
+Owned the technical roadmap for a major JavaScript migration.,JavaScript,Expert
+Started exploring PyTorch recently.,PyTorch,Beginner
+Some hands-on experience with CI/CD in small assignments.,CI/CD,Beginner
+Mentored junior developers on best practices in TypeScript.,TypeScript,Expert
+Some hands-on experience with C++ in small assignments.,C++,Beginner
+Trained the engineering team on advanced TensorFlow concepts.,TensorFlow,Expert
+Took an online tutorial on Java.,Java,Beginner
+Regularly use Deep Learning for day-to-day development tasks.,Deep Learning,Intermediate
+Five years of professional experience with React.,React,Expert
+Exposed to Next.js during a university project.,Next.js,Beginner
+Trained the engineering team on advanced PostgreSQL concepts.,PostgreSQL,Expert
+Solid working knowledge of PHP from an internship.,PHP,Intermediate
+Optimized performance-critical systems built with TensorFlow.,TensorFlow,Expert
+Basic understanding of TensorFlow.,TensorFlow,Beginner
+Five years of professional experience with Linux.,Linux,Expert
+Extensive production experience with Django at scale.,Django,Expert
+Comfortable writing Go code for medium-sized applications.,Go,Intermediate
+Developed features using Redis in a small team.,Redis,Intermediate
+"Deep expertise in Machine Learning, including advanced patterns and internals.",Machine Learning,Expert
+Designed the core architecture of a large-scale PyTorch application.,PyTorch,Expert
+Exposed to SQL during a university project.,SQL,Beginner
+Solid working knowledge of Docker from an internship.,Docker,Intermediate
+Beginner-level knowledge of SQL.,SQL,Beginner
+Mentored junior developers on best practices in REST API.,REST API,Expert
+Took an online tutorial on PostgreSQL.,PostgreSQL,Beginner
+Started exploring Redis recently.,Redis,Beginner
+Basic understanding of JavaScript.,JavaScript,Beginner
+Published technical talks on advanced Java techniques.,Java,Expert
+Built and maintained mission-critical infrastructure with TypeScript.,TypeScript,Expert
+Have read the documentation for Next.js but limited practical use.,Next.js,Beginner
+"Deep expertise in Next.js, including advanced patterns and internals.",Next.js,Expert
+Can independently build features using MongoDB with some guidance.,MongoDB,Intermediate
+Beginner-level knowledge of Deep Learning.,Deep Learning,Beginner
+Familiar with C++ through coursework.,C++,Beginner
+Owned the technical roadmap for a major Deep Learning migration.,Deep Learning,Expert
+"Deep expertise in MongoDB, including advanced patterns and internals.",MongoDB,Expert
+Recognized internally as the go-to expert on React.,React,Expert
+Some hands-on experience with Linux in small assignments.,Linux,Beginner
+Architected scalable solutions using Node.js for enterprise clients.,Node.js,Expert
+Took an online tutorial on Python.,Python,Beginner
+Currently learning Linux as part of a bootcamp.,Linux,Beginner
+Some hands-on experience with Node.js in small assignments.,Node.js,Beginner
+Drove major performance improvements in a REST API-based system.,REST API,Expert
+Developed features using Linux in a small team.,Linux,Intermediate
+Took an online tutorial on TypeScript.,TypeScript,Beginner
+Led a team building production systems with GraphQL.,GraphQL,Expert
+Developed features using Next.js in a small team.,Next.js,Intermediate
+Following a beginner course on C++ right now.,C++,Beginner
+Familiar with Django through coursework.,Django,Beginner
+Built a full application using Python.,Python,Intermediate
+Wrote a few small scripts using Linux.,Linux,Beginner
+Basic understanding of PHP.,PHP,Beginner
+Can independently build features using AWS with some guidance.,AWS,Intermediate
+Applied Java to solve practical problems in coursework.,Java,Intermediate
+Currently learning REST API as part of a bootcamp.,REST API,Beginner
+Led a team building production systems with Linux.,Linux,Expert
+Wrote a few small scripts using CI/CD.,CI/CD,Beginner
+Optimized performance-critical systems built with AWS.,AWS,Expert
+Implemented core functionality with Flask in a group project.,Flask,Intermediate
+Regularly use Docker for day-to-day development tasks.,Docker,Intermediate
+Comfortable writing TensorFlow code for medium-sized applications.,TensorFlow,Intermediate
+"Deep expertise in Docker, including advanced patterns and internals.",Docker,Expert
+Exposed to Tailwind CSS during a university project.,Tailwind CSS,Beginner
+Beginner-level knowledge of Tailwind CSS.,Tailwind CSS,Beginner
+Comfortable writing Deep Learning code for medium-sized applications.,Deep Learning,Intermediate
+Used Kubernetes extensively during a semester-long project.,Kubernetes,Intermediate
+Completed an introductory course in PHP.,PHP,Beginner
+Comfortable writing Machine Learning code for medium-sized applications.,Machine Learning,Intermediate
+Beginner-level knowledge of AWS.,AWS,Beginner
+Led a team building production systems with NestJS.,NestJS,Expert
+Have shipped a couple of side projects built with Git.,Git,Intermediate
+Wrote a few small scripts using JavaScript.,JavaScript,Beginner
+Used React extensively during a semester-long project.,React,Intermediate
+Took an online tutorial on Docker.,Docker,Beginner
+Currently learning TypeScript as part of a bootcamp.,TypeScript,Beginner
+Worked with Node.js for several months on a team project.,Node.js,Intermediate
+Wrote a few small scripts using Redis.,Redis,Beginner
+Comfortable writing Tailwind CSS code for medium-sized applications.,Tailwind CSS,Intermediate
+Used Docker extensively during a semester-long project.,Docker,Intermediate
+Contributed to a project using Docker during an internship.,Docker,Intermediate
+"New to JavaScript, still getting comfortable with the basics.",JavaScript,Beginner
+Worked with Machine Learning for several months on a team project.,Machine Learning,Intermediate
+Took an online tutorial on AWS.,AWS,Beginner
+Five years of professional experience with C++.,C++,Expert
+One year of experience working with SQL.,SQL,Intermediate
+Following a beginner course on TypeScript right now.,TypeScript,Beginner
+Completed an introductory course in Deep Learning.,Deep Learning,Beginner
+Optimized performance-critical systems built with Next.js.,Next.js,Expert
+Used Machine Learning to build a personal project.,Machine Learning,Intermediate
+Have shipped a couple of side projects built with REST API.,REST API,Intermediate
+Two years of hands-on experience with GraphQL.,GraphQL,Intermediate
+Started exploring CI/CD recently.,CI/CD,Beginner
+Completed an introductory course in GraphQL.,GraphQL,Beginner
+Some hands-on experience with TensorFlow in small assignments.,TensorFlow,Beginner
+Beginner-level knowledge of Docker.,Docker,Beginner
+Exposed to Flask during a university project.,Flask,Beginner
+Following a beginner course on PostgreSQL right now.,PostgreSQL,Beginner
+Regularly use JavaScript for day-to-day development tasks.,JavaScript,Intermediate
+Used JavaScript extensively during a semester-long project.,JavaScript,Intermediate
+Two years of hands-on experience with NestJS.,NestJS,Intermediate
+Completed an introductory course in Docker.,Docker,Beginner
+Published technical talks on advanced Flask techniques.,Flask,Expert
+Solid working knowledge of Deep Learning from an internship.,Deep Learning,Intermediate
+Built a full application using SQL.,SQL,Intermediate
+Basic understanding of Redis.,Redis,Beginner
+Currently learning Deep Learning as part of a bootcamp.,Deep Learning,Beginner
+Beginner-level knowledge of React.,React,Beginner
+Basic understanding of Machine Learning.,Machine Learning,Beginner
+Wrote a few small scripts using AWS.,AWS,Beginner
+Solid working knowledge of MongoDB from an internship.,MongoDB,Intermediate
+Following a beginner course on AWS right now.,AWS,Beginner
+Built and maintained mission-critical infrastructure with JavaScript.,JavaScript,Expert
+Following a beginner course on Docker right now.,Docker,Beginner
+Mentored junior developers on best practices in Flask.,Flask,Expert
+Published technical talks on advanced REST API techniques.,REST API,Expert
+Published technical talks on advanced NestJS techniques.,NestJS,Expert
+Implemented core functionality with Docker in a group project.,Docker,Intermediate
+Developed features using AWS in a small team.,AWS,Intermediate
+Contributed to a project using NestJS during an internship.,NestJS,Intermediate
+Optimized performance-critical systems built with Python.,Python,Expert
+One year of experience working with Java.,Java,Intermediate
+Developed features using GraphQL in a small team.,GraphQL,Intermediate
+Mentored junior developers on best practices in NestJS.,NestJS,Expert
+Published technical talks on advanced Machine Learning techniques.,Machine Learning,Expert
+Beginner-level knowledge of PyTorch.,PyTorch,Beginner
+Studied the fundamentals of SQL in class.,SQL,Beginner
+Some hands-on experience with Django in small assignments.,Django,Beginner
+"Deep expertise in React, including advanced patterns and internals.",React,Expert
+Five years of professional experience with REST API.,REST API,Expert
+Worked with PostgreSQL for several months on a team project.,PostgreSQL,Intermediate
+Two years of hands-on experience with CI/CD.,CI/CD,Intermediate
+Extensive production experience with C++ at scale.,C++,Expert
+Contributed to a project using Java during an internship.,Java,Intermediate
+Worked with JavaScript for several months on a team project.,JavaScript,Intermediate
+Comfortable writing TypeScript code for medium-sized applications.,TypeScript,Intermediate
+Led a team building production systems with PHP.,PHP,Expert
+Comfortable writing C++ code for medium-sized applications.,C++,Intermediate
+Solid working knowledge of SQL from an internship.,SQL,Intermediate
+Solid working knowledge of AWS from an internship.,AWS,Intermediate
+Familiar with AWS through coursework.,AWS,Beginner
+Solid working knowledge of Python from an internship.,Python,Intermediate
+Five years of professional experience with PyTorch.,PyTorch,Expert
+Optimized performance-critical systems built with Machine Learning.,Machine Learning,Expert
+Owned the technical roadmap for a major NestJS migration.,NestJS,Expert
+Two years of hands-on experience with Java.,Java,Intermediate
+Regularly use Kubernetes for day-to-day development tasks.,Kubernetes,Intermediate
+Only used React in a couple of homework assignments.,React,Beginner
+Applied PyTorch to solve practical problems in coursework.,PyTorch,Intermediate
+Exposed to NestJS during a university project.,NestJS,Beginner
+Following a beginner course on Linux right now.,Linux,Beginner
+Currently learning Next.js as part of a bootcamp.,Next.js,Beginner
+Currently learning MongoDB as part of a bootcamp.,MongoDB,Beginner
+Started exploring Git recently.,Git,Beginner
+Contributed to open-source projects related to TypeScript.,TypeScript,Expert
+Started exploring TypeScript recently.,TypeScript,Beginner
+Five years of professional experience with CI/CD.,CI/CD,Expert
+Regularly use Django for day-to-day development tasks.,Django,Intermediate
+Recognized internally as the go-to expert on Tailwind CSS.,Tailwind CSS,Expert
+Mentored junior developers on best practices in Django.,Django,Expert
+Trained the engineering team on advanced Machine Learning concepts.,Machine Learning,Expert
+Implemented core functionality with PHP in a group project.,PHP,Intermediate
+Familiar with Flask through coursework.,Flask,Beginner
+Started exploring REST API recently.,REST API,Beginner
+Some hands-on experience with Next.js in small assignments.,Next.js,Beginner
+"Deep expertise in Node.js, including advanced patterns and internals.",Node.js,Expert
+Worked with Git for several months on a team project.,Git,Intermediate
+Optimized performance-critical systems built with MongoDB.,MongoDB,Expert
+Started exploring SQL recently.,SQL,Beginner
+Recognized internally as the go-to expert on Go.,Go,Expert
+Trained the engineering team on advanced Tailwind CSS concepts.,Tailwind CSS,Expert
+Started exploring MongoDB recently.,MongoDB,Beginner
+Completed an introductory course in Tailwind CSS.,Tailwind CSS,Beginner
+Beginner-level knowledge of Python.,Python,Beginner
+Implemented core functionality with Python in a group project.,Python,Intermediate
+One year of experience working with Linux.,Linux,Intermediate
+Exposed to Node.js during a university project.,Node.js,Beginner
+Following a beginner course on NestJS right now.,NestJS,Beginner
+Some hands-on experience with Tailwind CSS in small assignments.,Tailwind CSS,Beginner
+Beginner-level knowledge of MongoDB.,MongoDB,Beginner
+Wrote a few small scripts using GraphQL.,GraphQL,Beginner
+Architected scalable solutions using NestJS for enterprise clients.,NestJS,Expert
+Have shipped a couple of side projects built with AWS.,AWS,Intermediate
+Drove major performance improvements in a Python-based system.,Python,Expert
+Beginner-level knowledge of PHP.,PHP,Beginner
+Some hands-on experience with GraphQL in small assignments.,GraphQL,Beginner
+Contributed to open-source projects related to Tailwind CSS.,Tailwind CSS,Expert
+Basic understanding of Node.js.,Node.js,Beginner
+One year of experience working with Redis.,Redis,Intermediate
+Published technical talks on advanced Git techniques.,Git,Expert
+Implemented core functionality with Go in a group project.,Go,Intermediate
+"New to Tailwind CSS, still getting comfortable with the basics.",Tailwind CSS,Beginner
+Built a full application using C++.,C++,Intermediate
+Published technical talks on advanced PostgreSQL techniques.,PostgreSQL,Expert
+Implemented core functionality with Deep Learning in a group project.,Deep Learning,Intermediate
+"New to Kubernetes, still getting comfortable with the basics.",Kubernetes,Beginner
+Two years of hands-on experience with TensorFlow.,TensorFlow,Intermediate
+One year of experience working with Node.js.,Node.js,Intermediate
+Optimized performance-critical systems built with React.,React,Expert
+Regularly use REST API for day-to-day development tasks.,REST API,Intermediate
+One year of experience working with TensorFlow.,TensorFlow,Intermediate
+Studied the fundamentals of CI/CD in class.,CI/CD,Beginner
+Mentored junior developers on best practices in MongoDB.,MongoDB,Expert
+Mentored junior developers on best practices in Python.,Python,Expert
+Wrote a few small scripts using Next.js.,Next.js,Beginner
+Worked with NestJS for several months on a team project.,NestJS,Intermediate
+Trained the engineering team on advanced Kubernetes concepts.,Kubernetes,Expert
+Recognized internally as the go-to expert on Deep Learning.,Deep Learning,Expert
+Two years of hands-on experience with PyTorch.,PyTorch,Intermediate
+Used PHP extensively during a semester-long project.,PHP,Intermediate
+Took an online tutorial on Tailwind CSS.,Tailwind CSS,Beginner
+Solid working knowledge of TypeScript from an internship.,TypeScript,Intermediate
+Owned the technical roadmap for a major Kubernetes migration.,Kubernetes,Expert
+Familiar with SQL through coursework.,SQL,Beginner
+"New to Go, still getting comfortable with the basics.",Go,Beginner
+Solid working knowledge of TensorFlow from an internship.,TensorFlow,Intermediate
+Built a full application using PyTorch.,PyTorch,Intermediate
+Applied SQL to solve practical problems in coursework.,SQL,Intermediate
+Developed features using Deep Learning in a small team.,Deep Learning,Intermediate
+Can independently build features using REST API with some guidance.,REST API,Intermediate
+Drove major performance improvements in a NestJS-based system.,NestJS,Expert
+Comfortable writing MongoDB code for medium-sized applications.,MongoDB,Intermediate
+Developed features using Tailwind CSS in a small team.,Tailwind CSS,Intermediate
+Designed the core architecture of a large-scale Flask application.,Flask,Expert
+Published technical talks on advanced C++ techniques.,C++,Expert
+Beginner-level knowledge of REST API.,REST API,Beginner
+Drove major performance improvements in a Machine Learning-based system.,Machine Learning,Expert
+Can independently build features using Node.js with some guidance.,Node.js,Intermediate
+Optimized performance-critical systems built with Deep Learning.,Deep Learning,Expert
+Applied Django to solve practical problems in coursework.,Django,Intermediate
+Mentored junior developers on best practices in Git.,Git,Expert
+Have shipped a couple of side projects built with Next.js.,Next.js,Intermediate
+Developed features using Go in a small team.,Go,Intermediate
+Optimized performance-critical systems built with TypeScript.,TypeScript,Expert
+"New to Deep Learning, still getting comfortable with the basics.",Deep Learning,Beginner
+Recognized internally as the go-to expert on JavaScript.,JavaScript,Expert
+"New to REST API, still getting comfortable with the basics.",REST API,Beginner
+Took an online tutorial on CI/CD.,CI/CD,Beginner
+Took an online tutorial on PyTorch.,PyTorch,Beginner
+Worked with TensorFlow for several months on a team project.,TensorFlow,Intermediate
+Exposed to Deep Learning during a university project.,Deep Learning,Beginner
+Comfortable writing Redis code for medium-sized applications.,Redis,Intermediate
+Contributed to a project using MongoDB during an internship.,MongoDB,Intermediate
+Recognized internally as the go-to expert on Node.js.,Node.js,Expert
+Developed features using Python in a small team.,Python,Intermediate
+Applied Tailwind CSS to solve practical problems in coursework.,Tailwind CSS,Intermediate
+Exposed to TypeScript during a university project.,TypeScript,Beginner
+Exposed to GraphQL during a university project.,GraphQL,Beginner
+Some hands-on experience with Python in small assignments.,Python,Beginner
+Recognized internally as the go-to expert on PyTorch.,PyTorch,Expert
+Only used Redis in a couple of homework assignments.,Redis,Beginner
+Following a beginner course on Deep Learning right now.,Deep Learning,Beginner
+Applied Git to solve practical problems in coursework.,Git,Intermediate
+Completed an introductory course in React.,React,Beginner
+Solid working knowledge of JavaScript from an internship.,JavaScript,Intermediate
+Mentored junior developers on best practices in Deep Learning.,Deep Learning,Expert
+"Deep expertise in PostgreSQL, including advanced patterns and internals.",PostgreSQL,Expert
+Only used NestJS in a couple of homework assignments.,NestJS,Beginner
+Trained the engineering team on advanced PHP concepts.,PHP,Expert
+Architected scalable solutions using Redis for enterprise clients.,Redis,Expert
+Wrote a few small scripts using MongoDB.,MongoDB,Beginner
+Some hands-on experience with Docker in small assignments.,Docker,Beginner
+Implemented core functionality with Java in a group project.,Java,Intermediate
+Following a beginner course on GraphQL right now.,GraphQL,Beginner
+Implemented core functionality with Git in a group project.,Git,Intermediate
+Applied Machine Learning to solve practical problems in coursework.,Machine Learning,Intermediate
+"Deep expertise in CI/CD, including advanced patterns and internals.",CI/CD,Expert
+Following a beginner course on Django right now.,Django,Beginner
+Only used SQL in a couple of homework assignments.,SQL,Beginner
+"New to MongoDB, still getting comfortable with the basics.",MongoDB,Beginner
+Developed features using SQL in a small team.,SQL,Intermediate
+Currently learning Go as part of a bootcamp.,Go,Beginner
+Used Node.js to build a personal project.,Node.js,Intermediate
+Recognized internally as the go-to expert on C++.,C++,Expert
+Contributed to a project using TypeScript during an internship.,TypeScript,Intermediate
+Solid working knowledge of C++ from an internship.,C++,Intermediate
+Took an online tutorial on Node.js.,Node.js,Beginner
+Drove major performance improvements in a Deep Learning-based system.,Deep Learning,Expert
+Designed the core architecture of a large-scale TypeScript application.,TypeScript,Expert
+Following a beginner course on REST API right now.,REST API,Beginner
+Architected scalable solutions using Go for enterprise clients.,Go,Expert
+Studied the fundamentals of Linux in class.,Linux,Beginner
+Completed an introductory course in Go.,Go,Beginner
+One year of experience working with TypeScript.,TypeScript,Intermediate
+Familiar with Next.js through coursework.,Next.js,Beginner
+Beginner-level knowledge of Java.,Java,Beginner
+Studied the fundamentals of TypeScript in class.,TypeScript,Beginner
+"New to Next.js, still getting comfortable with the basics.",Next.js,Beginner
+Currently learning PostgreSQL as part of a bootcamp.,PostgreSQL,Beginner
+Used Deep Learning to build a personal project.,Deep Learning,Intermediate
+Contributed to a project using Next.js during an internship.,Next.js,Intermediate
+Five years of professional experience with Django.,Django,Expert
+Studied the fundamentals of Django in class.,Django,Beginner
+Recognized internally as the go-to expert on Docker.,Docker,Expert
+Took an online tutorial on Deep Learning.,Deep Learning,Beginner
+Designed the core architecture of a large-scale Java application.,Java,Expert
+"New to Linux, still getting comfortable with the basics.",Linux,Beginner
+Familiar with React through coursework.,React,Beginner
+Started exploring PostgreSQL recently.,PostgreSQL,Beginner
+Designed the core architecture of a large-scale NestJS application.,NestJS,Expert
+"Deep expertise in JavaScript, including advanced patterns and internals.",JavaScript,Expert
+Implemented core functionality with NestJS in a group project.,NestJS,Intermediate
+Exposed to REST API during a university project.,REST API,Beginner
+Currently learning NestJS as part of a bootcamp.,NestJS,Beginner
+Have shipped a couple of side projects built with SQL.,SQL,Intermediate
+Some hands-on experience with MongoDB in small assignments.,MongoDB,Beginner
+"Deep expertise in Kubernetes, including advanced patterns and internals.",Kubernetes,Expert
+Recognized internally as the go-to expert on PHP.,PHP,Expert
+Developed features using NestJS in a small team.,NestJS,Intermediate
+Used MongoDB extensively during a semester-long project.,MongoDB,Intermediate
+Currently learning PyTorch as part of a bootcamp.,PyTorch,Beginner
+Only used Docker in a couple of homework assignments.,Docker,Beginner
+Architected scalable solutions using Linux for enterprise clients.,Linux,Expert
+Currently learning React as part of a bootcamp.,React,Beginner
+Mentored junior developers on best practices in JavaScript.,JavaScript,Expert
+Owned the technical roadmap for a major Machine Learning migration.,Machine Learning,Expert
+Worked with Redis for several months on a team project.,Redis,Intermediate
+Contributed to a project using GraphQL during an internship.,GraphQL,Intermediate
+Designed the core architecture of a large-scale Next.js application.,Next.js,Expert
+Designed the core architecture of a large-scale CI/CD application.,CI/CD,Expert
+Owned the technical roadmap for a major CI/CD migration.,CI/CD,Expert
+One year of experience working with Docker.,Docker,Intermediate
+"New to Git, still getting comfortable with the basics.",Git,Beginner
+Architected scalable solutions using PostgreSQL for enterprise clients.,PostgreSQL,Expert
+Contributed to open-source projects related to Docker.,Docker,Expert
+Some hands-on experience with React in small assignments.,React,Beginner
+Basic understanding of PostgreSQL.,PostgreSQL,Beginner
+Wrote a few small scripts using REST API.,REST API,Beginner
+Extensive production experience with PostgreSQL at scale.,PostgreSQL,Expert
+Published technical talks on advanced TypeScript techniques.,TypeScript,Expert
+Used CI/CD to build a personal project.,CI/CD,Intermediate
+Contributed to a project using PyTorch during an internship.,PyTorch,Intermediate
+Owned the technical roadmap for a major React migration.,React,Expert
+Have read the documentation for CI/CD but limited practical use.,CI/CD,Beginner
+Used Python extensively during a semester-long project.,Python,Intermediate
+Worked with Next.js for several months on a team project.,Next.js,Intermediate
+Contributed to open-source projects related to AWS.,AWS,Expert
+Following a beginner course on Git right now.,Git,Beginner
+Architected scalable solutions using Python for enterprise clients.,Python,Expert
+"New to TensorFlow, still getting comfortable with the basics.",TensorFlow,Beginner
+Built a full application using Deep Learning.,Deep Learning,Intermediate
+Studied the fundamentals of TensorFlow in class.,TensorFlow,Beginner
+Worked with Java for several months on a team project.,Java,Intermediate
+Have read the documentation for AWS but limited practical use.,AWS,Beginner
+Regularly use NestJS for day-to-day development tasks.,NestJS,Intermediate
+Recognized internally as the go-to expert on TypeScript.,TypeScript,Expert
+Recognized internally as the go-to expert on Linux.,Linux,Expert
+"Deep expertise in TensorFlow, including advanced patterns and internals.",TensorFlow,Expert
+Developed features using Git in a small team.,Git,Intermediate
+Have read the documentation for JavaScript but limited practical use.,JavaScript,Beginner
+Built a full application using Redis.,Redis,Intermediate
+Exposed to Kubernetes during a university project.,Kubernetes,Beginner
+Beginner-level knowledge of Machine Learning.,Machine Learning,Beginner
+Architected scalable solutions using Kubernetes for enterprise clients.,Kubernetes,Expert
+Applied Deep Learning to solve practical problems in coursework.,Deep Learning,Intermediate
+Five years of professional experience with SQL.,SQL,Expert
+Two years of hands-on experience with Deep Learning.,Deep Learning,Intermediate
+Have shipped a couple of side projects built with Node.js.,Node.js,Intermediate
+Contributed to open-source projects related to Deep Learning.,Deep Learning,Expert
+Beginner-level knowledge of Kubernetes.,Kubernetes,Beginner
+Started exploring NestJS recently.,NestJS,Beginner
+Exposed to Go during a university project.,Go,Beginner
+Started exploring TensorFlow recently.,TensorFlow,Beginner
+Two years of hands-on experience with Machine Learning.,Machine Learning,Intermediate
+Recognized internally as the go-to expert on GraphQL.,GraphQL,Expert
+Built a full application using PHP.,PHP,Intermediate
+Worked with Deep Learning for several months on a team project.,Deep Learning,Intermediate
+Trained the engineering team on advanced Java concepts.,Java,Expert
+Started exploring Tailwind CSS recently.,Tailwind CSS,Beginner
+Built a full application using NestJS.,NestJS,Intermediate
+Worked with MongoDB for several months on a team project.,MongoDB,Intermediate
+"Deep expertise in C++, including advanced patterns and internals.",C++,Expert
+Wrote a few small scripts using Go.,Go,Beginner
+Designed the core architecture of a large-scale SQL application.,SQL,Expert
+Mentored junior developers on best practices in React.,React,Expert
+Have shipped a couple of side projects built with GraphQL.,GraphQL,Intermediate
+One year of experience working with AWS.,AWS,Intermediate
+Can independently build features using Redis with some guidance.,Redis,Intermediate
+One year of experience working with Deep Learning.,Deep Learning,Intermediate
+Solid working knowledge of GraphQL from an internship.,GraphQL,Intermediate
+Some hands-on experience with AWS in small assignments.,AWS,Beginner
+Have read the documentation for Go but limited practical use.,Go,Beginner
+Extensive production experience with PyTorch at scale.,PyTorch,Expert
+Beginner-level knowledge of GraphQL.,GraphQL,Beginner
+Used PHP to build a personal project.,PHP,Intermediate
+Contributed to open-source projects related to PHP.,PHP,Expert
+Led a team building production systems with PyTorch.,PyTorch,Expert
+Extensive production experience with Python at scale.,Python,Expert
+Architected scalable solutions using Docker for enterprise clients.,Docker,Expert
+Developed features using Node.js in a small team.,Node.js,Intermediate
+Extensive production experience with PHP at scale.,PHP,Expert
+Built a full application using Tailwind CSS.,Tailwind CSS,Intermediate
+Applied AWS to solve practical problems in coursework.,AWS,Intermediate
+Led a team building production systems with REST API.,REST API,Expert
+Two years of hands-on experience with SQL.,SQL,Intermediate
+"Deep expertise in Deep Learning, including advanced patterns and internals.",Deep Learning,Expert
+Can independently build features using Docker with some guidance.,Docker,Intermediate
+Implemented core functionality with Redis in a group project.,Redis,Intermediate
+Beginner-level knowledge of JavaScript.,JavaScript,Beginner
+One year of experience working with REST API.,REST API,Intermediate
+Extensive production experience with Git at scale.,Git,Expert
+Have read the documentation for Python but limited practical use.,Python,Beginner
+Contributed to a project using Python during an internship.,Python,Intermediate
+Worked with Django for several months on a team project.,Django,Intermediate
+Trained the engineering team on advanced Linux concepts.,Linux,Expert
+Comfortable writing Node.js code for medium-sized applications.,Node.js,Intermediate
+Contributed to a project using Kubernetes during an internship.,Kubernetes,Intermediate
+Trained the engineering team on advanced TypeScript concepts.,TypeScript,Expert
+Two years of hands-on experience with Linux.,Linux,Intermediate
+Wrote a few small scripts using Python.,Python,Beginner
+Mentored junior developers on best practices in Tailwind CSS.,Tailwind CSS,Expert
+Only used Git in a couple of homework assignments.,Git,Beginner
+Completed an introductory course in Machine Learning.,Machine Learning,Beginner
+Led a team building production systems with MongoDB.,MongoDB,Expert
+Took an online tutorial on Machine Learning.,Machine Learning,Beginner
+Have shipped a couple of side projects built with Docker.,Docker,Intermediate
+Implemented core functionality with Linux in a group project.,Linux,Intermediate
+"New to GraphQL, still getting comfortable with the basics.",GraphQL,Beginner
+Took an online tutorial on Redis.,Redis,Beginner
+Currently learning Tailwind CSS as part of a bootcamp.,Tailwind CSS,Beginner
+Mentored junior developers on best practices in PHP.,PHP,Expert
+Currently learning Machine Learning as part of a bootcamp.,Machine Learning,Beginner
+"Deep expertise in Redis, including advanced patterns and internals.",Redis,Expert
+Have read the documentation for Flask but limited practical use.,Flask,Beginner
+Led a team building production systems with CI/CD.,CI/CD,Expert
+Built a full application using Linux.,Linux,Intermediate
+Used Machine Learning extensively during a semester-long project.,Machine Learning,Intermediate
+Drove major performance improvements in a Node.js-based system.,Node.js,Expert
+Owned the technical roadmap for a major Go migration.,Go,Expert
+Started exploring Python recently.,Python,Beginner
+Designed the core architecture of a large-scale REST API application.,REST API,Expert
+Two years of hands-on experience with REST API.,REST API,Intermediate
+Solid working knowledge of Kubernetes from an internship.,Kubernetes,Intermediate
