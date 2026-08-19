@@ -4,6 +4,11 @@ import { Repository } from 'typeorm';
 import { Skill } from './skill.entity';
 import { UserSkill } from './user-skill.entity';
 
+export interface MatchedSkill {
+  skill: string;
+  proficiency: string;
+}
+
 @Injectable()
 export class SkillsService {
   constructor(
@@ -22,8 +27,20 @@ export class SkillsService {
     return skill;
   }
 
-  async saveUserSkills(userId: number, skillNames: string[], source = 'resume') {
-    for (const name of skillNames) {
+  async saveUserSkills(
+    userId: number,
+    skills: (string | MatchedSkill)[],
+    source = 'resume',
+  ) {
+    // Normalize: GitHub sends plain strings (no proficiency signal available),
+    // resume sends { skill, proficiency } objects.
+    const normalized: MatchedSkill[] = skills.map((item) =>
+      typeof item === 'string'
+        ? { skill: item, proficiency: 'Not specified' }
+        : item,
+    );
+
+    for (const { skill: name, proficiency } of normalized) {
       const skill = await this.findOrCreateSkill(name);
 
       const existing = await this.userSkillsRepository.findOne({
@@ -34,9 +51,13 @@ export class SkillsService {
         const userSkill = this.userSkillsRepository.create({
           userId,
           skillId: skill.id,
+          proficiency,
           source,
         });
         await this.userSkillsRepository.save(userSkill);
+      } else {
+        existing.proficiency = proficiency;
+        await this.userSkillsRepository.save(existing);
       }
     }
   }
@@ -50,6 +71,7 @@ export class SkillsService {
     return userSkills.map((us) => ({
       id: us.skill.id,
       name: us.skill.name,
+      proficiency: us.proficiency,
       source: us.source,
     }));
   }

@@ -12,7 +12,7 @@ import { diskStorage } from 'multer';
 import { extname } from 'path';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { ResumesService } from './resumes.service';
-import { SkillsService } from '../skills/skills.service';
+import { SkillsService, MatchedSkill } from '../skills/skills.service';
 
 @Controller('resumes')
 export class ResumesController {
@@ -49,7 +49,7 @@ export class ResumesController {
     const resume = await this.resumesService.create(file.originalname, file.path, userId);
 
     const skillsResult = await this.resumesService.extractSkills(file.path, file.originalname);
-    const matchedSkills: string[] = skillsResult.matchedSkills || [];
+    const matchedSkills: MatchedSkill[] = skillsResult.matchedSkills || [];
 
     if (matchedSkills.length > 0) {
       await this.skillsService.saveUserSkills(userId, matchedSkills, 'resume');

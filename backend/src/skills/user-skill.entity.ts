@@ -28,6 +28,9 @@ export class UserSkill {
   @Column()
   skillId!: number;
 
+  @Column({ default: 'Not specified' })
+  proficiency!: string;
+
   @Column({ default: 'resume' })
   source!: string;
 
