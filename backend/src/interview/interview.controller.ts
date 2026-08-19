@@ -20,8 +20,9 @@ export class InterviewController {
       throw new BadRequestException('jobId is required');
     }
 
+    const job = await this.jobsService.findOne(jobIdNum);
     const requiredSkills = await this.jobsService.getRequiredSkills(jobIdNum);
-    const questionTexts = this.interviewService.getQuestionsForSkills(requiredSkills);
+    const questionTexts = await this.interviewService.getQuestionsForJob(job.title, requiredSkills);
 
     const savedEntries: { id: number; question: string }[] = [];
     for (const q of questionTexts) {
@@ -49,5 +50,25 @@ export class InterviewController {
     }
 
     return { message: 'Answer saved', interviewId: result.id };
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Get('summary')
+  async getSummary(@Query('jobId') jobId: string, @Request() req) {
+    const userId = req.user.userId;
+    const jobIdNum = parseInt(jobId, 10);
+
+    if (!jobIdNum) {
+      throw new BadRequestException('jobId is required');
+    }
+
+    const job = await this.jobsService.findOne(jobIdNum);
+    const summary = await this.interviewService.generateSummary(userId, jobIdNum, job.title);
+
+    if (!summary) {
+      throw new BadRequestException('Could not generate summary. Try again.');
+    }
+
+    return summary;
   }
 }

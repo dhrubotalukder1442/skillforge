@@ -14,6 +14,87 @@ type Question = {
   question: string;
 };
 
+function QuestionLoader() {
+  return (
+    <div className="flex flex-col items-center justify-center gap-7 py-10">
+      <div
+        className="relative h-20 w-20"
+        style={{ perspective: "500px" }}
+      >
+        {/* Glow behind the cube */}
+        <div
+          className="absolute inset-0 rounded-full bg-[#6d63ff]/30 blur-2xl"
+          style={{ animation: "pulseGlow 2.2s ease-in-out infinite" }}
+        />
+
+        <div
+          className="absolute inset-0"
+          style={{
+            transformStyle: "preserve-3d",
+            animation: "spin3d 3s ease-in-out infinite",
+          }}
+        >
+          <div className="absolute inset-0 rounded-xl border border-white/20 shadow-lg" style={{ background: "linear-gradient(135deg, #6d63ff, #5d53eb)", transform: "translateZ(40px)" }} />
+          <div className="absolute inset-0 rounded-xl border border-white/20 shadow-lg" style={{ background: "linear-gradient(135deg, #5d53eb, #4a41d1)", transform: "rotateY(180deg) translateZ(40px)" }} />
+          <div className="absolute inset-0 rounded-xl border border-white/20 shadow-lg" style={{ background: "linear-gradient(135deg, #46c2a5, #3bab90)", transform: "rotateY(90deg) translateZ(40px)" }} />
+          <div className="absolute inset-0 rounded-xl border border-white/20 shadow-lg" style={{ background: "linear-gradient(135deg, #3bab90, #2f8f77)", transform: "rotateY(-90deg) translateZ(40px)" }} />
+          <div className="absolute inset-0 rounded-xl border border-white/20 shadow-lg" style={{ background: "linear-gradient(135deg, #8b7fff, #6d63ff)", transform: "rotateX(90deg) translateZ(40px)" }} />
+          <div className="absolute inset-0 rounded-xl border border-white/20 shadow-lg" style={{ background: "linear-gradient(135deg, #14213d, #1e2c52)", transform: "rotateX(-90deg) translateZ(40px)" }} />
+        </div>
+      </div>
+
+      <div className="text-center">
+        <p className="text-[15px] font-semibold text-[#14213d]">
+          Crafting your interview questions
+        </p>
+        <p className="mt-1.5 text-xs text-[#94a3b8]">
+          Tailoring them to your target role...
+        </p>
+      </div>
+
+      <div className="flex items-center gap-1.5">
+        <span className="h-1.5 w-1.5 rounded-full bg-[#6d63ff]" style={{ animation: "dotBounce 1.4s ease-in-out infinite", animationDelay: "0s" }} />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#6d63ff]" style={{ animation: "dotBounce 1.4s ease-in-out infinite", animationDelay: "0.2s" }} />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#6d63ff]" style={{ animation: "dotBounce 1.4s ease-in-out infinite", animationDelay: "0.4s" }} />
+      </div>
+
+      <style jsx>{`
+        @keyframes spin3d {
+          0% {
+            transform: rotateX(0deg) rotateY(0deg);
+          }
+          50% {
+            transform: rotateX(180deg) rotateY(180deg);
+          }
+          100% {
+            transform: rotateX(360deg) rotateY(360deg);
+          }
+        }
+        @keyframes pulseGlow {
+          0%, 100% {
+            opacity: 0.4;
+            transform: scale(0.9);
+          }
+          50% {
+            opacity: 0.8;
+            transform: scale(1.15);
+          }
+        }
+        @keyframes dotBounce {
+          0%, 60%, 100% {
+            transform: translateY(0);
+            opacity: 0.4;
+          }
+          30% {
+            transform: translateY(-6px);
+            opacity: 1;
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
+
 export default function InterviewPage() {
   const router = useRouter();
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -159,32 +240,37 @@ export default function InterviewPage() {
               questions.
             </p>
 
-            <select
-              className="mb-4 h-11 w-full rounded-xl border border-[#dce3ee] bg-[#fbfcfe] px-4 text-[15px] text-[#14213d] outline-none transition focus:border-[#6d63ff] focus:bg-white focus:ring-4 focus:ring-[#6d63ff]/10 sm:h-12"
-              onChange={(e) => setSelectedJobId(e.target.value)}
-              value={selectedJobId}
-            >
-              <option value="">Select a target role</option>
-              {jobs.map((job) => (
-                <option key={job.id} value={job.id}>
-                  {job.title}
-                </option>
-              ))}
-            </select>
+                        {loading ? (
+              <QuestionLoader />
+            ) : (
+              <>
+                <select
+                  className="mb-4 h-11 w-full rounded-xl border border-[#dce3ee] bg-[#fbfcfe] px-4 text-[15px] text-[#14213d] outline-none transition focus:border-[#6d63ff] focus:bg-white focus:ring-4 focus:ring-[#6d63ff]/10 sm:h-12"
+                  onChange={(e) => setSelectedJobId(e.target.value)}
+                  value={selectedJobId}
+                >
+                  <option value="">Select a target role</option>
+                  {jobs.map((job) => (
+                    <option key={job.id} value={job.id}>
+                      {job.title}
+                    </option>
+                  ))}
+                </select>
 
-            {error && (
-              <div className="mb-4 rounded-xl border border-[#f2c9cd] bg-[#fff5f5] px-4 py-3 text-sm font-medium text-[#ba4d58]">
-                {error}
-              </div>
+                {error && (
+                  <div className="mb-4 rounded-xl border border-[#f2c9cd] bg-[#fff5f5] px-4 py-3 text-sm font-medium text-[#ba4d58]">
+                    {error}
+                  </div>
+                )}
+                <button
+                  className="flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#6d63ff] text-[15px] font-semibold text-white shadow-[0_10px_24px_rgba(109,99,255,0.24)] transition hover:bg-[#5d53eb] disabled:cursor-not-allowed disabled:bg-[#a9a4f7] sm:h-12"
+                  disabled={!selectedJobId}
+                  onClick={handleStart}
+                >
+                  Start practice interview
+                </button>
+              </>
             )}
-
-            <button
-              className="flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#6d63ff] text-[15px] font-semibold text-white shadow-[0_10px_24px_rgba(109,99,255,0.24)] transition hover:bg-[#5d53eb] disabled:cursor-not-allowed disabled:bg-[#a9a4f7] sm:h-12"
-              disabled={!selectedJobId || loading}
-              onClick={handleStart}
-            >
-              {loading ? "Loading..." : "Start practice interview"}
-            </button>
           </div>
         ) : (
           <div className="rounded-[24px] bg-white p-8 shadow-[0_12px_40px_rgba(30,52,92,0.08)] sm:p-10">

@@ -59,6 +59,14 @@ export class JobsService implements OnModuleInit {
     return this.jobsRepository.find();
   }
 
+  async findOne(jobId: number) {
+    const job = await this.jobsRepository.findOne({ where: { id: jobId } });
+    if (!job) {
+      throw new Error(`Job with id ${jobId} not found`);
+    }
+    return job;
+  }
+
   async getRequiredSkills(jobId: number) {
     const jobSkills = await this.jobSkillsRepository.find({
       where: { jobId },
