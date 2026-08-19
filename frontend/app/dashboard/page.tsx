@@ -45,6 +45,7 @@ type RoadmapData = {
   id: number;
   generatedAt: string;
   steps: RoadmapStepData[];
+ 
 };
 
 export default function DashboardPage() {
@@ -69,7 +70,7 @@ const [matchedSkills, setMatchedSkills] = useState<MatchedSkill[]>([]);
     type: "success" | "error";
     text: string;
   } | null>(null);
-  const [githubSkills, setGithubSkills] = useState<string[]>([]);
+ const [githubSkills, setGithubSkills] = useState<MatchedSkill[]>([]);
 
   const [jobs, setJobs] = useState<Job[]>([]);
   const [selectedJobId, setSelectedJobId] = useState<string>("");
@@ -541,12 +542,23 @@ const [matchedSkills, setMatchedSkills] = useState<MatchedSkill[]>([]);
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
-                {githubSkills.map((skill) => (
+                {githubSkills.map((item) => (
                   <span
-                    className="rounded-full bg-[#eef1f7] px-3 py-1.5 text-xs font-semibold text-[#6d63ff]"
-                    key={skill}
+                    className="flex items-center gap-1.5 rounded-full bg-[#eef1f7] px-3 py-1.5 text-xs font-semibold text-[#6d63ff]"
+                    key={item.skill}
                   >
-                    {skill}
+                    {item.skill}
+                    <span
+                      className={`rounded-full px-2 py-0.5 text-[10px] font-bold ${
+                        item.proficiency === "Expert"
+                          ? "bg-[#dcfce7] text-[#15803d]"
+                          : item.proficiency === "Intermediate"
+                            ? "bg-[#fef3c7] text-[#b45309]"
+                            : "bg-[#e0e7ff] text-[#4338ca]"
+                      }`}
+                    >
+                      {item.proficiency}
+                    </span>
                   </span>
                 ))}
               </div>

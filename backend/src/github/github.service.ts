@@ -9,6 +9,11 @@ const SKILLS = [
   'Swift', 'Kotlin', 'HTML', 'CSS', 'React', 'Vue', 'Docker', 'Shell', 'Rust',
 ];
 
+export interface GitHubMatchedSkill {
+  skill: string;
+  proficiency: string;
+}
+
 @Injectable()
 export class GitHubService {
   constructor(
@@ -28,28 +33,41 @@ export class GitHubService {
     }
   }
 
-  extractSkillsFromRepos(repos: any[]): string[] {
-    const foundLanguages = new Set<string>();
+  private proficiencyFromRepoCount(count: number): string {
+    if (count >= 4) return 'Expert';
+    if (count >= 2) return 'Intermediate';
+    return 'Beginner';
+  }
+
+  extractSkillsFromRepos(repos: any[]): GitHubMatchedSkill[] {
+    // Count how many repos mention each skill (as primary language or topic)
+    const skillRepoCount = new Map<string, number>();
 
     for (const repo of repos) {
+      const tagsInRepo = new Set<string>();
+
       if (repo.language) {
-        foundLanguages.add(repo.language);
+        tagsInRepo.add(repo.language.toLowerCase());
       }
       if (Array.isArray(repo.topics)) {
         for (const topic of repo.topics) {
-          foundLanguages.add(topic);
+          tagsInRepo.add(topic.toLowerCase());
+        }
+      }
+
+      for (const skill of SKILLS) {
+        if (tagsInRepo.has(skill.toLowerCase())) {
+          skillRepoCount.set(skill, (skillRepoCount.get(skill) || 0) + 1);
         }
       }
     }
 
-    const matched: string[] = [];
-    for (const skill of SKILLS) {
-      const isMatch = Array.from(foundLanguages).some(
-        (lang) => lang.toLowerCase() === skill.toLowerCase(),
-      );
-      if (isMatch) {
-        matched.push(skill);
-      }
+    const matched: GitHubMatchedSkill[] = [];
+    for (const [skill, count] of skillRepoCount.entries()) {
+      matched.push({
+        skill,
+        proficiency: this.proficiencyFromRepoCount(count),
+      });
     }
 
     return matched;
