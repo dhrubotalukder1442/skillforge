@@ -3,7 +3,7 @@ import uvicorn
 import pdfplumber
 import io
 
-from skills_data import SKILLS
+from nlp_extractor import extract_skills_nlp
 
 app = FastAPI()
 
@@ -22,12 +22,7 @@ async def extract_skills(file: UploadFile = File(...)):
             if page_text:
                 text += page_text + "\n"
 
-    text_lower = text.lower()
-
-    matched_skills = []
-    for skill in SKILLS:
-        if skill.lower() in text_lower:
-            matched_skills.append(skill)
+    matched_skills = extract_skills_nlp(text)
 
     return {
         "fileName": file.filename,
