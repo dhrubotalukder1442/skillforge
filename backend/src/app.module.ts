@@ -10,6 +10,7 @@ import { SkillsModule } from './skills/skills.module';
 import { JobsModule } from './jobs/jobs.module';
 import { RoadmapModule } from './roadmap/roadmap.module';
 import { GitHubModule } from './github/github.module';
+import { InterviewModule } from './interview/interview.module';
 
 @Module({
   imports: [
@@ -32,6 +33,7 @@ import { GitHubModule } from './github/github.module';
     JobsModule,
     RoadmapModule,
     GitHubModule,
+    InterviewModule,
   ],
   controllers: [AppController],
   providers: [AppService],
