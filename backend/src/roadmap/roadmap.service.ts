@@ -5,6 +5,7 @@ import { Roadmap } from './roadmap.entity';
 import { RoadmapStep } from './roadmap-step.entity';
 import { SkillsService } from '../skills/skills.service';
 import { RESOURCES, DEFAULT_RESOURCE } from './resources-data';
+import { GeminiRoadmapService } from './gemini-roadmap.service';
 
 @Injectable()
 export class RoadmapService {
@@ -14,14 +15,28 @@ export class RoadmapService {
     @InjectRepository(RoadmapStep)
     private roadmapStepRepository: Repository<RoadmapStep>,
     private skillsService: SkillsService,
+    private geminiRoadmapService: GeminiRoadmapService,
   ) {}
 
-  async generate(userId: number, jobId: number, missingSkills: string[]) {
-    const roadmap = this.roadmapRepository.create({ userId, jobId });
+  async generate(
+    userId: number,
+    jobId: number,
+    jobTitle: string,
+    missingSkills: string[],
+    existingSkills: string[],
+  ) {
+    // Ask Gemini to order the missing skills logically, and to write
+    // a short personalized paragraph — run both in parallel to save time
+    const [orderedSkills, advice] = await Promise.all([
+      this.geminiRoadmapService.suggestStepOrder(missingSkills),
+      this.geminiRoadmapService.generateAdvice(jobTitle, existingSkills, missingSkills),
+    ]);
+
+    const roadmap = this.roadmapRepository.create({ userId, jobId, advice: advice || null });
     const savedRoadmap = await this.roadmapRepository.save(roadmap);
 
     let order = 1;
-    for (const skillName of missingSkills) {
+    for (const skillName of orderedSkills) {
       const skill = await this.skillsService.findOrCreateSkill(skillName);
       const resource = RESOURCES[skillName] || DEFAULT_RESOURCE;
 
@@ -51,6 +66,7 @@ export class RoadmapService {
     return {
       id: roadmap?.id,
       generatedAt: roadmap?.generatedAt,
+      advice: roadmap?.advice || null,
       steps: steps.map((s) => ({
         id: s.id,
         skillName: s.skill.name,

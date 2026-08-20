@@ -22,13 +22,14 @@ export class RoadmapController {
       throw new BadRequestException('jobId is required');
     }
 
+        const job = await this.jobsService.findOne(jobIdNum);
     const requiredSkills = await this.jobsService.getRequiredSkills(jobIdNum);
     const userSkills = await this.skillsService.getUserSkills(userId);
     const userSkillNames = userSkills.map((s) => s.name);
 
     const missingSkills = requiredSkills.filter((skill) => !userSkillNames.includes(skill));
 
-    return this.roadmapService.generate(userId, jobIdNum, missingSkills);
+    return this.roadmapService.generate(userId, jobIdNum, job.title, missingSkills, userSkillNames);
   }
 
   @UseGuards(JwtAuthGuard)

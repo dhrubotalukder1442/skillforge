@@ -21,6 +21,9 @@ export class Roadmap {
   @Column()
   jobId!: number;
 
+  @Column('text', { nullable: true })
+  advice!: string | null;
+
   @CreateDateColumn()
   generatedAt!: Date;
 }

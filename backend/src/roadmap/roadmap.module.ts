@@ -4,12 +4,13 @@ import { Roadmap } from './roadmap.entity';
 import { RoadmapStep } from './roadmap-step.entity';
 import { RoadmapService } from './roadmap.service';
 import { RoadmapController } from './roadmap.controller';
+import { GeminiRoadmapService } from './gemini-roadmap.service';
 import { SkillsModule } from '../skills/skills.module';
 import { JobsModule } from '../jobs/jobs.module';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Roadmap, RoadmapStep]), SkillsModule, JobsModule],
-  providers: [RoadmapService],
+  providers: [RoadmapService, GeminiRoadmapService],
   controllers: [RoadmapController],
 })
 export class RoadmapModule {}

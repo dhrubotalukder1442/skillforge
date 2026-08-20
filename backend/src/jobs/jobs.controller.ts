@@ -1,4 +1,4 @@
-import { Controller, Get, Query, UseGuards, Request } from '@nestjs/common';
+import { Controller, Get, Post, Body, Query, UseGuards, Request, BadRequestException } from '@nestjs/common';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { JobsService } from './jobs.service';
 import { SkillsService } from '../skills/skills.service';
@@ -39,4 +39,21 @@ export class JobsController {
       readinessScore,
     };
   }
+
+  @Get('search')
+async searchJobs(@Query('q') query: string) {
+  if (!query || query.trim().length < 1) {
+    return [];
+  }
+  return this.jobsService.searchJobsWithAISuggestions(query.trim());
+}
+
+@Post('find-or-create')
+async findOrCreateJob(@Body() body: { title: string }) {
+  const title = body.title?.trim();
+  if (!title) {
+    throw new BadRequestException('title is required');
+  }
+  return this.jobsService.findOrCreateJobWithAI(title);
+}
 }
