@@ -1,0 +1,33 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14213d"/>
+      <stop offset="100%" stop-color="#1c2c52"/>
+    </linearGradient>
+    <linearGradient id="markGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#46c2a5"/>
+      <stop offset="100%" stop-color="#6d63ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+
+  <!-- Ascending skill-level bars forming an upward path -->
+  <rect x="128" y="296" width="56" height="96" rx="12" fill="url(#markGrad)" opacity="0.55"/>
+  <rect x="204" y="248" width="56" height="144" rx="12" fill="url(#markGrad)" opacity="0.78"/>
+  <rect x="280" y="192" width="56" height="200" rx="12" fill="url(#markGrad)"/>
+
+  <!-- Spark / forge accent at the peak -->
+  <path d="M356 116
+           L370 158
+           L412 172
+           L370 186
+           L356 228
+           L342 186
+           L300 172
+           L342 158
+           Z"
+        fill="#ffffff"/>
+  <circle cx="356" cy="172" r="6" fill="#8ed9c6"/>
+</svg>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useMemo, useState, type FormEvent } from "react";
+import { useMemo, useRef, useState, type FormEvent } from "react";
 import {
   ArrowRight,
   Check,
@@ -32,6 +32,14 @@ const passwordRules = [
   },
 ];
 
+// মোবাইলে টাইপ করার সময় কীবোর্ড ওঠার পর ইনপুটটা স্ক্রিনের মাঝখানে নিয়ে আসার জন্য
+const scrollFieldIntoView = (event: React.FocusEvent<HTMLInputElement>) => {
+  const target = event.target;
+  window.setTimeout(() => {
+    target.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, 250);
+};
+
 export default function RegisterPage() {
   const router = useRouter();
   const [name, setName] = useState("");
@@ -41,6 +49,7 @@ export default function RegisterPage() {
   const [message, setMessage] = useState<MessageState>(null);
   const [loading, setLoading] = useState(false);
   const [passwordTouched, setPasswordTouched] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const passwordChecks = useMemo(
     () =>
@@ -102,10 +111,16 @@ export default function RegisterPage() {
         type: "success",
         text: `Welcome to SkillForge${
           data.email ? `, ${data.email}` : ""
-        }.`,
+        }. Redirecting to login...`,
       });
 
-      router.push("/dashboard");
+      setLoading(false);
+
+      // মেসেজটা দেখানোর জন্য সামান্য সময় (৮০০ms), তারপর সাথে সাথে login page-এ redirect।
+      // এখানে বড় কোনো delay নেই — শুধু user যাতে confirmation-টা এক ঝলক দেখতে পায়।
+      window.setTimeout(() => {
+        router.replace("/login");
+      }, 800);
     } catch (error) {
       setMessage({
         type: "error",
@@ -114,13 +129,12 @@ export default function RegisterPage() {
             ? error.message
             : "Something went wrong. Try again.",
       });
-    } finally {
       setLoading(false);
     }
   };
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f4f7fb] px-3 py-6 font-sans text-[#14213d] sm:px-6 sm:py-10 lg:p-8">
+    <main className="min-h-[100dvh] overflow-x-hidden bg-[#f4f7fb] px-3 py-6 font-sans text-[#14213d] sm:px-6 sm:py-10 lg:p-8">
       <div className="mx-auto grid w-full max-w-[1120px] grid-cols-1 overflow-hidden rounded-[20px] bg-white shadow-[0_12px_40px_rgba(30,52,92,0.12)] sm:rounded-[24px] sm:shadow-[0_20px_70px_rgba(30,52,92,0.14)] lg:min-h-[760px] lg:grid-cols-[0.92fr_1.08fr] lg:rounded-[30px] lg:shadow-[0_28px_90px_rgba(30,52,92,0.15)]">
         <section className="relative flex min-h-[280px] flex-col justify-between overflow-hidden bg-[#14213d] p-5 text-white sm:min-h-[420px] sm:p-8 md:min-h-[480px] md:p-10 lg:min-h-0">
           <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#46c2a5]/20 blur-2xl sm:-right-28 sm:-top-24 sm:h-80 sm:w-80" />
@@ -213,6 +227,7 @@ export default function RegisterPage() {
             <form
               className="space-y-4 sm:space-y-5"
               onSubmit={handleSubmit}
+              ref={formRef}
             >
               <div>
                 <label
@@ -227,6 +242,7 @@ export default function RegisterPage() {
                   className="h-11 w-full rounded-xl border border-[#dce3ee] bg-[#fbfcfe] px-4 text-[15px] text-[#14213d] outline-none transition placeholder:text-[#9aa8ba] focus:border-[#6d63ff] focus:bg-white focus:ring-4 focus:ring-[#6d63ff]/10 sm:h-12"
                   id="name"
                   onChange={(event) => setName(event.target.value)}
+                  onFocus={scrollFieldIntoView}
                   placeholder="Your full name"
                   required
                   type="text"
@@ -247,6 +263,7 @@ export default function RegisterPage() {
                   className="h-11 w-full rounded-xl border border-[#dce3ee] bg-[#fbfcfe] px-4 text-[15px] text-[#14213d] outline-none transition placeholder:text-[#9aa8ba] focus:border-[#6d63ff] focus:bg-white focus:ring-4 focus:ring-[#6d63ff]/10 sm:h-12"
                   id="email"
                   onChange={(event) => setEmail(event.target.value)}
+                  onFocus={scrollFieldIntoView}
                   placeholder="you@example.com"
                   required
                   type="email"
@@ -280,10 +297,9 @@ export default function RegisterPage() {
                     minLength={8}
                     onBlur={() => setPasswordTouched(true)}
                     onChange={(event) => setPassword(event.target.value)}
-                    pattern="(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+                    onFocus={scrollFieldIntoView}
                     placeholder="Create a strong password"
                     required
-                    title="Use at least 8 characters, one number, and one special character."
                     type={showPassword ? "text" : "password"}
                     value={password}
                   />
