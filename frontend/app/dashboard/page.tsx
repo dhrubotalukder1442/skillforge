@@ -946,7 +946,7 @@ export default function DashboardPage() {
 
                   {roleSelectorOpen && (
                     <div className={`absolute left-0 right-0 z-20 mt-2 rounded-xl p-3 shadow-[0_16px_36px_rgba(20,33,61,0.25)] ${t.popover}`}>
-                      <input
+                       <input
                         autoFocus
                         className={`h-10 w-full rounded-lg border px-3 text-sm outline-none ${t.input}`}
                         placeholder="Search a role, e.g. Product Manager"
@@ -959,6 +959,7 @@ export default function DashboardPage() {
                         onKeyDown={(e) => {
                           if (e.key === "Enter") submitNewRoleFromNav();
                         }}
+                        onBlur={() => setTimeout(() => setRoleSelectorOpen(false), 150)}
                       />
                       <div className="mt-2 max-h-56 overflow-y-auto">
                         {creatingRole ? (
@@ -1391,56 +1392,15 @@ export default function DashboardPage() {
                 Compare your current skills with the requirements of your target role.
               </p>
 
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <div className="relative flex-1">
-                  <input
-                    className={`h-11 w-full rounded-xl border px-4 text-[15px] outline-none transition focus:ring-4 focus:ring-[#6d63ff]/10 sm:h-12 ${t.input}`}
-                    onChange={(e) => {
-                      setRoleQuery(e.target.value);
-                      setShowSuggestions(true);
-                      if (e.target.value !== selectedJobTitle) {
-                        setSelectedJobId("");
-                      }
-                    }}
-                    onFocus={() => setShowSuggestions(true)}
-                    onBlur={() => setTimeout(() => setShowSuggestions(false), 150)}
-                    placeholder="Type a role, e.g. Product Manager"
-                    type="text"
-                    value={roleQuery}
-                  />
-
-                  {showSuggestions && roleQuery.trim() && (
-                    <div className={`absolute z-10 mt-1 w-full overflow-hidden rounded-xl shadow-[0_12px_28px_rgba(30,52,92,0.12)] ${t.popover}`}>
-                      {creatingRole ? (
-                        <div className={`flex items-center gap-2 px-4 py-3 text-sm ${t.textMuted}`}>
-                          <span className="flex gap-1">
-                            <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[#6d63ff] [animation-delay:-0.3s]" />
-                            <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[#6d63ff] [animation-delay:-0.15s]" />
-                            <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[#6d63ff]" />
-                          </span>
-                          Setting up this role...
-                        </div>
-                      ) : roleSuggestions.length > 0 ? (
-                        roleSuggestions.map((job) => (
-                          <button
-                            className={`flex w-full items-center justify-between px-4 py-2.5 text-left text-sm transition ${
-                              isDark ? "text-[#e2e8f0] hover:bg-white/5" : "text-[#334155] hover:bg-[#f5f4ff]"
-                            }`}
-                            key={job.id ?? job.title}
-                            onClick={() => handleSelectRole(job)}
-                            type="button"
-                          >
-                            <span>{job.title}</span>
-                            {job.isNew && <span className={`text-xs font-medium ${t.textMuted}`}>Suggested</span>}
-                          </button>
-                        ))
-                      ) : (
-                        <div className={`flex items-center gap-2 px-4 py-3 text-sm ${t.textMuted}`}>
-                          <Search className="h-3.5 w-3.5 animate-pulse text-[#6d63ff]" strokeWidth={2.5} />
-                          Searching...
-                        </div>
-                      )}
-                    </div>
+                            <div className="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+                <div className={`flex h-11 flex-1 items-center rounded-xl border px-4 text-[15px] sm:h-12 ${t.innerCard}`}>
+                  <Target className="mr-2 h-4 w-4 shrink-0 text-[#6d63ff]" strokeWidth={2.5} />
+                  {selectedJobTitle ? (
+                    <span className="font-medium">{selectedJobTitle}</span>
+                  ) : (
+                    <span className={t.textMuted}>
+                      Set your target role above, in the &quot;Target Role&quot; card
+                    </span>
                   )}
                 </div>
 
