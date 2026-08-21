@@ -34,8 +34,9 @@ export class ResumesService {
       const formData = new FormData();
       formData.append('file', fileBuffer, fileName);
 
-      const response = await axios.post(
-        'http://127.0.0.1:8000/extract-skills',
+      const aiServiceUrl = process.env.AI_SERVICE_URL || 'http://127.0.0.1:8000';
+        const response = await axios.post(
+          `${aiServiceUrl}/extract-skills`,
         formData,
         { headers: formData.getHeaders() },
       );
