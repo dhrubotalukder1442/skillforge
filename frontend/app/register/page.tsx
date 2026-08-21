@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useMemo, useState, type FormEvent } from "react";
 import {
   ArrowRight,
@@ -32,6 +33,7 @@ const passwordRules = [
 ];
 
 export default function RegisterPage() {
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -83,6 +85,7 @@ export default function RegisterPage() {
       });
 
       const data = (await response.json()) as {
+        access_token?: string;
         email?: string;
         message?: string;
       };
@@ -91,12 +94,18 @@ export default function RegisterPage() {
         throw new Error(data.message || "Registration failed");
       }
 
+      if (data.access_token) {
+        localStorage.setItem("access_token", data.access_token);
+      }
+
       setMessage({
         type: "success",
         text: `Welcome to SkillForge${
           data.email ? `, ${data.email}` : ""
         }.`,
       });
+
+      router.push("/dashboard");
     } catch (error) {
       setMessage({
         type: "error",

@@ -10,10 +10,13 @@ async function bootstrap() {
         'http://localhost:3000',
         'https://skillforge-virid-nine.vercel.app',
       ];
+
       if (!origin) return callback(null, true);
+
       const isAllowed =
         allowedOrigins.includes(origin) ||
         /^https:\/\/skillforge-.*\.vercel\.app$/.test(origin);
+
       if (isAllowed) {
         callback(null, true);
       } else {
@@ -23,10 +26,6 @@ async function bootstrap() {
     credentials: true,
   });
 
-  const port = process.env.PORT || 3001;
-  console.log('🚀 Listening on port:', port);
-  console.log('🔍 process.env.PORT value:', process.env.PORT);
-
-  await app.listen(port);
+  await app.listen(process.env.PORT || 3001);
 }
 bootstrap();
