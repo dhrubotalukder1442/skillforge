@@ -249,9 +249,13 @@ export default function LoginPage() {
 
             <p className="mt-6 text-center text-xs leading-5 text-[#91a0b4] sm:mt-7">
               Don&apos;t have an account?{" "}
-              <span className="font-semibold text-[#6d63ff]">
+              <button
+                className="font-semibold text-[#6d63ff] underline-offset-2 transition hover:text-[#5d53eb] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6d63ff]/40 focus:ring-offset-1 rounded"
+                onClick={() => router.push("/register")}
+                type="button"
+              >
                 Create one
-              </span>
+              </button>
             </p>
           </div>
         </section>
