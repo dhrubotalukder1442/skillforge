@@ -54,11 +54,8 @@ export default function LoginPage() {
         localStorage.setItem("access_token", data.access_token);
       }
 
-      setMessage({
-        type: "success",
-        text: `Welcome back${data.user?.name ? `, ${data.user.name}` : ""}.`,
-      });
-      router.push("/dashboard");
+      // Login successful — সাথে সাথে dashboard-এ চলে যাও, কোনো message/delay ছাড়াই
+      router.replace("/dashboard");
     } catch (error) {
       setMessage({
         type: "error",
@@ -67,7 +64,6 @@ export default function LoginPage() {
             ? error.message
             : "Something went wrong. Try again.",
       });
-    } finally {
       setLoading(false);
     }
   };
@@ -237,11 +233,7 @@ export default function LoginPage() {
             {message && (
               <div
                 aria-live="polite"
-                className={`mt-4 rounded-xl border px-4 py-3 text-sm font-medium sm:mt-5 ${
-                  message.type === "success"
-                    ? "border-[#bce8da] bg-[#effbf7] text-[#13795f]"
-                    : "border-[#f2c9cd] bg-[#fff5f5] text-[#ba4d58]"
-                }`}
+                className="mt-4 rounded-xl border border-[#f2c9cd] bg-[#fff5f5] px-4 py-3 text-sm font-medium text-[#ba4d58] sm:mt-5"
               >
                 {message.text}
               </div>
