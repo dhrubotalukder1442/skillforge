@@ -8,17 +8,12 @@ async function bootstrap() {
     origin: (origin, callback) => {
       const allowedOrigins = [
         'http://localhost:3000',
-        'https://skillforge-virid-nine.vercel.app', // তোমার main production domain
+        'https://skillforge-virid-nine.vercel.app',
       ];
-
-      // origin না থাকলে (যেমন Postman/server-to-server) allow করো
       if (!origin) return callback(null, true);
-
-      // exact match অথবা যেকোনো vercel.app preview subdomain allow করো
       const isAllowed =
         allowedOrigins.includes(origin) ||
         /^https:\/\/skillforge-.*\.vercel\.app$/.test(origin);
-
       if (isAllowed) {
         callback(null, true);
       } else {
@@ -28,6 +23,10 @@ async function bootstrap() {
     credentials: true,
   });
 
-  await app.listen(process.env.PORT || 3001);
+  const port = process.env.PORT || 3001;
+  console.log('🚀 Listening on port:', port);
+  console.log('🔍 process.env.PORT value:', process.env.PORT);
+
+  await app.listen(port);
 }
 bootstrap();
