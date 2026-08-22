@@ -33,7 +33,7 @@ export class InterviewController {
     return { questions: savedEntries };
   }
 
-  @UseGuards(JwtAuthGuard)
+   @UseGuards(JwtAuthGuard)
   @Post('answer')
   async saveAnswer(@Body() body: { interviewId: number; answer: string }, @Request() req) {
     const userId = req.user.userId;
@@ -49,7 +49,12 @@ export class InterviewController {
       throw new BadRequestException('Interview question not found');
     }
 
-    return { message: 'Answer saved', interviewId: result.id };
+    return {
+      message: 'Answer saved',
+      interviewId: result.id,
+      score: result.score,
+      feedback: result.feedback,
+    };
   }
 
   @UseGuards(JwtAuthGuard)

@@ -3,35 +3,41 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Interview } from './interview.entity';
 import { QUESTIONS, DEFAULT_QUESTIONS } from './questions-data';
-import { GeminiService as ClaudeService } from './gemini.service';
+import { GeminiInterviewService } from './gemini-interview.service';
 
 @Injectable()
 export class InterviewService {
   constructor(
     @InjectRepository(Interview)
     private interviewRepository: Repository<Interview>,
-    private claudeService: ClaudeService,
+    private geminiInterviewService: GeminiInterviewService,
   ) {}
 
-  // Static fallback, used only if the AI call fails
-  private getStaticQuestions(requiredSkills: string[]): string[] {
+  getQuestionsForSkills(requiredSkills: string[]): string[] {
     const questions: string[] = [];
+
     for (const skill of requiredSkills) {
       const skillQuestions = QUESTIONS[skill];
-      if (skillQuestions) questions.push(...skillQuestions);
+      if (skillQuestions) {
+        questions.push(...skillQuestions);
+      }
     }
-    return questions.length > 0 ? questions.slice(0, 8) : DEFAULT_QUESTIONS;
+
+    if (questions.length === 0) {
+      return DEFAULT_QUESTIONS;
+    }
+
+    return questions.slice(0, 8);
   }
 
   async getQuestionsForJob(jobTitle: string, requiredSkills: string[]): Promise<string[]> {
-    const aiQuestions = await this.claudeService.generateQuestions(jobTitle, requiredSkills);
+    const aiQuestions = await this.geminiInterviewService.generateQuestions(jobTitle, requiredSkills);
 
-    if (aiQuestions.length > 0) {
-      return aiQuestions;
+    if (aiQuestions && aiQuestions.length > 0) {
+      return aiQuestions.slice(0, 8);
     }
 
-    // AI failed or returned nothing usable — fall back to static bank
-    return this.getStaticQuestions(requiredSkills);
+    return this.getQuestionsForSkills(requiredSkills);
   }
 
   async createQuestionEntry(userId: number, jobId: number, question: string) {
@@ -48,9 +54,21 @@ export class InterviewService {
     const interview = await this.interviewRepository.findOne({
       where: { id: interviewId, userId },
     });
-    if (!interview) return null;
+
+    if (!interview) {
+      return null;
+    }
 
     interview.answer = answer;
+
+    const { score, feedback } = await this.geminiInterviewService.gradeAnswer(
+      interview.question,
+      answer,
+    );
+
+    interview.score = score;
+    interview.feedback = feedback;
+
     return this.interviewRepository.save(interview);
   }
 
@@ -61,23 +79,34 @@ export class InterviewService {
     });
   }
 
-  async getSessionForJob(userId: number, jobId: number) {
-    return this.interviewRepository.find({
+  async generateSummary(userId: number, jobId: number, jobTitle: string) {
+    const entries = await this.interviewRepository.find({
       where: { userId, jobId },
       order: { createdAt: 'ASC' },
     });
-  }
 
-  async generateSummary(userId: number, jobId: number, jobTitle: string) {
-    const session = await this.getSessionForJob(userId, jobId);
+    const answered = entries.filter(
+      (e) => e.answer !== null && e.answer !== undefined,
+    );
 
-    if (session.length === 0) return null;
+    if (answered.length === 0) {
+      return null;
+    }
 
-    const qaPairs = session.map((entry) => ({
-      question: entry.question,
-      answer: entry.answer || '',
-    }));
+    const totalScore = answered.reduce((sum, e) => sum + (e.score ?? 0), 0);
+    const averageScore = Math.round((totalScore / answered.length) * 10) / 10;
 
-    return this.claudeService.generateInterviewSummary(jobTitle, qaPairs);
+    return {
+      jobTitle,
+      totalQuestions: entries.length,
+      answeredQuestions: answered.length,
+      averageScore,
+      breakdown: answered.map((e) => ({
+        question: e.question,
+        answer: e.answer,
+        score: e.score,
+        feedback: e.feedback,
+      })),
+    };
   }
 }

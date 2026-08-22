@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Sparkles, ArrowLeft, ArrowRight, CheckCircle2, MessageCircleQuestion } from "lucide-react";
+import { Sparkles, ArrowLeft, ArrowRight, CheckCircle2, MessageCircleQuestion, Loader2 } from "lucide-react";
 
 type Job = {
   id: number;
@@ -105,6 +105,7 @@ export default function InterviewPage() {
   const [savedAnswers, setSavedAnswers] = useState<Record<number, string>>({});
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [gradingResult, setGradingResult] = useState<{ score: number | null; feedback: string | null } | null>(null);
   const [error, setError] = useState("");
   const [started, setStarted] = useState(false);
 
@@ -171,9 +172,10 @@ export default function InterviewPage() {
 
     if (answer.trim()) {
       setSaving(true);
+      setGradingResult(null);
       try {
         const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-        await fetch(`${apiUrl}/interview/answer`, {
+        const res = await fetch(`${apiUrl}/interview/answer`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -184,14 +186,19 @@ export default function InterviewPage() {
             answer: answer.trim(),
           }),
         });
+        const data = await res.json();
         setSavedAnswers((prev) => ({ ...prev, [questions[currentIndex].id]: answer.trim() }));
+        setGradingResult({ score: data.score ?? null, feedback: data.feedback ?? null });
       } catch (err) {
         // fail silently, allow moving on
       } finally {
         setSaving(false);
       }
     }
+  };
 
+  const handleNextQuestion = () => {
+    setGradingResult(null);
     if (currentIndex < questions.length - 1) {
       const nextIndex = currentIndex + 1;
       setCurrentIndex(nextIndex);
@@ -282,12 +289,28 @@ export default function InterviewPage() {
               {questions[currentIndex]?.question}
             </h2>
 
-            <textarea
+                        <textarea
               className="min-h-[160px] w-full rounded-xl border border-[#dce3ee] bg-[#fbfcfe] p-4 text-[15px] text-[#14213d] outline-none transition placeholder:text-[#9aa8ba] focus:border-[#6d63ff] focus:bg-white focus:ring-4 focus:ring-[#6d63ff]/10"
               onChange={(e) => setAnswer(e.target.value)}
               placeholder="Type your answer here..."
               value={answer}
             />
+
+            {gradingResult && (
+              <div className="mt-4 rounded-xl border border-[#dce3ee] bg-[#fbfcfe] p-4">
+                <div className="mb-2 flex items-center gap-2">
+                  <span className="text-sm font-semibold text-[#334155]">AI Feedback</span>
+                  {gradingResult.score !== null && (
+                    <span className="rounded-full bg-[#eef1f7] px-2.5 py-0.5 text-xs font-bold text-[#6d63ff]">
+                      {gradingResult.score}/5
+                    </span>
+                  )}
+                </div>
+                <p className="text-sm text-[#64748b]">
+                  {gradingResult.feedback || "Feedback unavailable for this answer."}
+                </p>
+              </div>
+            )}
 
             <div className="mt-6 flex items-center justify-between gap-3">
               <button
@@ -298,23 +321,38 @@ export default function InterviewPage() {
                 Previous
               </button>
 
-              {isLastQuestion ? (
-                <button
-                  className="flex h-11 items-center justify-center gap-2 rounded-xl bg-[#46c2a5] px-6 text-sm font-semibold text-[#14213d] transition hover:bg-[#3bab90] disabled:cursor-not-allowed"
-                  disabled={saving}
-                  onClick={handleSaveAndNext}
-                >
-                  <CheckCircle2 className="h-4 w-4" strokeWidth={2.5} />
-                  {saving ? "Saving..." : "Finish"}
-                </button>
+              {gradingResult ? (
+                isLastQuestion ? (
+                  <span className="flex h-11 items-center justify-center gap-2 rounded-xl bg-[#eef1f7] px-6 text-sm font-semibold text-[#6d63ff]">
+                    <CheckCircle2 className="h-4 w-4" strokeWidth={2.5} />
+                    All done!
+                  </span>
+                ) : (
+                  <button
+                    className="flex h-11 items-center justify-center gap-2 rounded-xl bg-[#14213d] px-6 text-sm font-semibold text-white transition hover:bg-[#1e2c52]"
+                    onClick={handleNextQuestion}
+                  >
+                    Next question
+                    <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+                  </button>
+                )
               ) : (
                 <button
-                  className="flex h-11 items-center justify-center gap-2 rounded-xl bg-[#14213d] px-6 text-sm font-semibold text-white transition hover:bg-[#1e2c52] disabled:cursor-not-allowed"
-                  disabled={saving}
+                  className="flex h-11 items-center justify-center gap-2 rounded-xl bg-[#46c2a5] px-6 text-sm font-semibold text-[#14213d] transition hover:bg-[#3bab90] disabled:cursor-not-allowed"
+                  disabled={saving || !answer.trim()}
                   onClick={handleSaveAndNext}
                 >
-                  {saving ? "Saving..." : "Next"}
-                  <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+                  {saving ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" strokeWidth={2.5} />
+                      Grading...
+                    </>
+                  ) : (
+                    <>
+                      <CheckCircle2 className="h-4 w-4" strokeWidth={2.5} />
+                      Submit answer
+                    </>
+                  )}
                 </button>
               )}
             </div>

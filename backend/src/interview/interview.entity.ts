@@ -17,6 +17,12 @@ export class Interview {
   @Column('text', { nullable: true })
   answer!: string | null;
 
+  @Column('int', { nullable: true })
+  score!: number | null;
+
+  @Column('text', { nullable: true })
+  feedback!: string | null;
+
   @CreateDateColumn()
   createdAt!: Date;
 }
