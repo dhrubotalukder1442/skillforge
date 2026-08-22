@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Sparkles, ArrowLeft, ArrowRight, CheckCircle2, MessageCircleQuestion, Loader2 } from "lucide-react";
 
@@ -226,8 +227,8 @@ export default function InterviewPage() {
           >
             <ArrowLeft className="h-4 w-4" strokeWidth={2.5} />
           </button>
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#46c2a5] text-[#14213d] shadow-[0_10px_24px_rgba(70,194,165,0.28)]">
-            <Sparkles className="h-5 w-5" strokeWidth={2.5} />
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-xl sm:h-10 sm:w-10">
+            <Image src="/icon.svg" alt="SkillForge logo" width={40} height={40} className="h-full w-full object-cover" />
           </div>
           <span className="text-lg font-bold tracking-[-0.03em]">
             Mock Interview

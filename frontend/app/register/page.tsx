@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { useMemo, useRef, useState, type FormEvent } from "react";
 import {
   ArrowRight,
@@ -143,12 +144,13 @@ export default function RegisterPage() {
 
           <div className="relative">
             <div className="mb-8 flex items-center gap-3 sm:mb-14 md:mb-20">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#46c2a5] text-[#14213d] shadow-[0_10px_24px_rgba(70,194,165,0.28)] sm:h-10 sm:w-10">
-                <Sparkles
-                  className="h-4 w-4 sm:h-5 sm:w-5"
-                  strokeWidth={2.5}
-                />
-              </div>
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-xl sm:h-10 sm:w-10">
+              <Image
+                src="/icon.svg"
+                alt="SkillForge logo"
+                className="h-full w-full object-cover"
+              />
+            </div>
 
               <span className="text-base font-bold tracking-[-0.03em] sm:text-lg">
                 SkillForge
